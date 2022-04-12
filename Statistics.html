@@ -28,7 +28,7 @@
   <div class="burger">
     <a href="Home.html">Home</a>
     <a href="Winners.html">Winners</a>
-    <a href="#contact">Login</a>
+    <a href="Login.html">Login</a>
     <a href="Statistics.html">Statistics</a>
   </div>
 
@@ -45,7 +45,7 @@
 <div class="sidenav">
   <a href="Home.html">Home</a>
   <a href="Winners.html">Winners</a>
-  <a href="#contact">Login</a>
+  <a href="Login.html">Login</a>
   <a href="Statistics.html">Statistics</a>
   <button class="dropdown-btn">Actors
     <i class="fa fa-caret-down"></i>
@@ -75,7 +75,183 @@ for (i = 0; i < dropdown.length; i++) {
   });
 }
 </script>
-        
+   
+<section id="section-b">
+  <p>
+    <br> 
+    <br> 
+    <h3>&emsp;Choose a statistic type:</h3>
+    <br> 
+  </p>
+</section>
+
+<button type="button" class="collapsible">Statistic Type 1</button>
+<div class="content">
+  <form>
+    <div class="fallbackYearPicker">
+      <div>
+        <span>
+          <label for="year">Year:</label>
+          <select id="year" name="year">
+            <option selected>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+            <option>2018</option>
+            <option>2017</option>
+            <option>2016</option>
+            <option>2015</option>
+            <option>2015</option>
+            <option>2013</option>
+            <option>2012</option>
+            <option>2011</option>
+            <option>2010</option>
+            <option>2009</option>
+            <option>2008</option>
+            <option>2007</option>
+            <option>2006</option>
+            <option>2005</option>
+            <option>2004</option>
+            <option>2003</option>
+            <option>2002</option>
+            <option>2001</option>
+            <option>2000</option>
+            <option>1999</option>
+            <option>1998</option>
+            <option>1997</option>
+            <option>1996</option>
+            <option>1995</option>
+          </select>
+        </span>
+      </div>
+    </div>
+  </form> 
+ <button class="button">Export as webpage</button>
+  <button class="button">Export as SVG</button>
+  <button class="button">Export as CSV</button>
+  <p></p>
+
+</div>   
+
+
+
+<button type="button" class="collapsible">Statistic Type 2</button>
+<div class="content">
+  <form>
+    <div class="fallbackYearPicker">
+      <div>
+        <span>
+          <label for="year">Year:</label>
+          <select id="year" name="year">
+            <option selected>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+            <option>2018</option>
+            <option>2017</option>
+            <option>2016</option>
+            <option>2015</option>
+            <option>2015</option>
+            <option>2013</option>
+            <option>2012</option>
+            <option>2011</option>
+            <option>2010</option>
+            <option>2009</option>
+            <option>2008</option>
+            <option>2007</option>
+            <option>2006</option>
+            <option>2005</option>
+            <option>2004</option>
+            <option>2003</option>
+            <option>2002</option>
+            <option>2001</option>
+            <option>2000</option>
+            <option>1999</option>
+            <option>1998</option>
+            <option>1997</option>
+            <option>1996</option>
+            <option>1995</option>
+          </select>
+        </span>
+      </div>
+    </div>
+  </form> 
+ <button class="button">Export as webpage</button>
+  <button class="button">Export as SVG</button>
+  <button class="button">Export as CSV</button>
+  <p></p>
+
+</div>   
+
+
+
+<button type="button" class="collapsible">Statistic Type 3</button>
+<div class="content">
+  <form>
+    <div class="fallbackYearPicker">
+      <div>
+        <span>
+          <label for="year">Year:</label>
+          <select id="year" name="year">
+            <option selected>2022</option>
+            <option>2021</option>
+            <option>2020</option>
+            <option>2019</option>
+            <option>2018</option>
+            <option>2017</option>
+            <option>2016</option>
+            <option>2015</option>
+            <option>2015</option>
+            <option>2013</option>
+            <option>2012</option>
+            <option>2011</option>
+            <option>2010</option>
+            <option>2009</option>
+            <option>2008</option>
+            <option>2007</option>
+            <option>2006</option>
+            <option>2005</option>
+            <option>2004</option>
+            <option>2003</option>
+            <option>2002</option>
+            <option>2001</option>
+            <option>2000</option>
+            <option>1999</option>
+            <option>1998</option>
+            <option>1997</option>
+            <option>1996</option>
+            <option>1995</option>
+          </select>
+        </span>
+      </div>
+    </div>
+  </form> 
+ <button class="button">Export as webpage</button>
+  <button class="button">Export as SVG</button>
+  <button class="button">Export as CSV</button>
+  <p></p>
+
+</div>   
+
+
+
+
+<script>
+    var coll = document.getElementsByClassName("collapsible");
+    var i;
+    
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    }
+    </script>
    
   </body>
 
