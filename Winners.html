@@ -9,12 +9,12 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Actors Guild Awards Visualizer</title>
-
+   
    
   </head>
 
   <body>
-
+    
     <header id="showcase">
       <h1>Winners</h1>
     </header>
@@ -113,6 +113,20 @@
       <div id="main">
         <button class="openbtn" onclick="openNav()">&#9776; Choose the year</button>
       </div>
+
+      <script>
+        function openNav() {
+    document.getElementById("mySidebar").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+  }
+  
+  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+  function closeNav() {
+    document.getElementById("mySidebar").style.width = "0";
+    document.getElementById("main").style.marginLeft = "0";
+  }
+  
+      </script>
 
 
     <section id="section-b">
