@@ -433,11 +433,20 @@
                 <h4>6.2 Communication with the backend</h4>
                 <p>
                     We will use a Restful API in order to communicate with the backend. 
-                    This will be implemented with the help of NODE.js. 
                     This API will be able to proceed all the operations we require, based
                     on the interogation of the databases.
                     The API will get a JSON/XML file from the backend which will be used to create some of
                     the frontend pages.
+                    <br>We will use the php language in order the implement the backend.  
+                    <br>One of the main functionalities that will require a backend implementation is the login and sign up. 
+                    We will make interogations on the user database in order to validate the account details or create a new account.
+                    The user will complete the username and password fields, and the php file will store the informations and interogate the database.
+                    <br>Another important functionality is related to the statistics page. This page will create different statistics about the nominalizations. 
+                    In order to create these statistics, we will need another php file that will interogate the other database, makes the different types of statistics 
+                    and displays them on the Statistics page.
+                    <br>The Winners page will also require a php implementation in order to place the actors that won an award, according to the category and year of their nominalization.
+                    <br>The Home page will also need backend implementation especially for the search bar and the news functionality. An valid search or a click on one of the news will 
+                    the user to a specific page.
                  </p>
             </section>
 
@@ -465,12 +474,12 @@
                     leave comments on actors pages.
                     We will use the database existent on <a href="https://www.kaggle.com/datasets/unanimad/screen-actors-guild-awards?resource=download
                     " >Kaggle</a> that contains informations about actors, nominalizations and winners.
-                    The database for actors is made of the following attributes: 
-                    - year: The year of the nominalization. We will use this attribute in oreder to place the actor in the statistics and winner pages.
-                    - category: The category where the actor is nominated. We will use this atribute in order to place the actor in the winners page.
-                    - full_name: The full name of the actor nominated. We will use this atribute in order to create the actor's page.
-                    - show: The show the actor nominated played in.
-                    - won: This attribute is boolean and indicates whether the actor won the nominalization or not. 
+                    <br>The database for actors is made of the following atributes: 
+                    <br>- year: The year of the nominalization. We will use this attribute in oreder to place the actor in the statistics and winner pages.
+                    <br>- category: The category where the actor is nominated. We will use this atribute in order to place the actor in the winners page.
+                    <br>- full_name: The full name of the actor nominated. We will use this atribute in order to create the actor's page.
+                    <br>- show: The show the actor nominated played in.
+                    <br> - won: This attribute is boolean and indicates whether the actor won the nominalization or not. 
 
                     The database for the users will store informations as username and password.
                  </p>
