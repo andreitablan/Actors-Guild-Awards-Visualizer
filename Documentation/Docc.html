@@ -463,6 +463,16 @@
                     We will use two databases implemented with sqlite3. 
                     They will represent the actors and their nominalization for each category and the users accounts, who are able to
                     leave comments on actors pages.
+                    We will use the database existent on <a href="https://www.kaggle.com/datasets/unanimad/screen-actors-guild-awards?resource=download
+                    " >Kaggle</a> that contains informations about actors, nominalizations and winners.
+                    The database for actors is made of the following attributes: 
+                    - year: The year of the nominalization. We will use this attribute in oreder to place the actor in the statistics and winner pages.
+                    - category: The category where the actor is nominated. We will use this atribute in order to place the actor in the winners page.
+                    - full_name: The full name of the actor nominated. We will use this atribute in order to create the actor's page.
+                    - show: The show the actor nominated played in.
+                    - won: This attribute is boolean and indicates whether the actor won the nominalization or not. 
+
+                    The database for the users will store informations as username and password.
                  </p>
             </section>
 
