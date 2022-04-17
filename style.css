@@ -441,8 +441,10 @@ section{
 /*THIS IS FOR THE SEARCH BAR*/
 
 .search-bar{
+  margin-left: 1cm;
   width: 100%;
   max-width: 400px;
+  max-height: 50px;
   background: red;
   display: flex;
   align-items: center;
@@ -459,6 +461,7 @@ section{
   font-size: 20px;
   color: white;
 }
+
 ::placeholder{
   color: #ffffff;
 }
@@ -470,12 +473,12 @@ section{
 .search-bar button{
   border:0;
   border-radius:50%;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background:rgba(83, 47, 47, 0.082);
   cursor:pointer;
-
 }
+
 /* Buttons for csv svg and webp*/
 .button {
   background-color: #ff0000;
@@ -490,7 +493,6 @@ section{
   cursor: pointer;
 }
 
-
 /* Make it a marquee */
 .marquee {
   width:100%;
@@ -501,8 +503,6 @@ section{
 	color: rgba(255,255,255,0.5);
 	padding: 0 10px;
   text-transform: uppercase;
-  
-
 }
 
 .marquee span {

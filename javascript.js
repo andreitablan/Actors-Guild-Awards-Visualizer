@@ -34,21 +34,3 @@ function openNav() {
     document.getElementById("main").style.marginLeft = "0";
   }
   
-  /* THIS IS FOR THE CAROUSEL */
-  import Carousel from 'flat-carousel';
-
-const images = [
-    { src: 'some image' }
-];
-
-const MyCarousel = () => (
-    <Carousel>
-        {images.map((image, index) => (
-            <div
-                key={index}
-                className="demo-item"
-                style={{ backgroundImage: 'url(' + image.src + ')' }}
-            />
-        ))}
-    </Carousel>
-);
