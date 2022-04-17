@@ -65,12 +65,8 @@
 
   }
   
-
-
   * {box-sizing: border-box}
 
-
-/* Style the button that is used to open and close the collapsible content */
 .collapsible {
   background-color: #262626;
   color: #ccc;
@@ -84,12 +80,10 @@
   font-weight:500;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .collapsible:hover {
   background-color: rgba(255, 0, 0, 0.76);
 }
 
-/* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 0 18px;
   display: none;
@@ -98,22 +92,19 @@
 }
 
 
-/*3*/
-/* The sidebar menu */
 .sidebar {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
+  height: 100%; 
+  width: 0; 
+  position: fixed; 
+  z-index: 1;
   top: 0;
   left: 0;
-  background-color: #262626; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+  background-color: #262626; 
+  overflow-x: hidden; 
+  padding-top: 60px;
+  transition: 0.5s;
 }
 
-/* The sidebar links */
 .sidebar a {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
@@ -123,12 +114,10 @@
   transition: 0.3s;
 }
 
-/* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
   color: #f1f1f1;
 }
 
-/* Position and style the close button (top right corner) */
 .sidebar .closebtn {
   position: absolute;
   top: 0;
@@ -137,7 +126,6 @@
   margin-left: 50px;
 }
 
-/* The button used to open the sidebar */
 .openbtn {
   font-size: 25px;
   cursor: pointer;
@@ -151,14 +139,10 @@
   background-color: #444;
 }
 
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-  transition: margin-left .5s; /* If you want a transition effect */
+  transition: margin-left .5s; 
   padding: 20px;
 }
-
-
-/*sidenav*/
 
 @media (max-width: 800px){
 
@@ -203,11 +187,11 @@
 }
 
 .burger a{
-  background-color: rgba(255, 0, 0, 0.76); /* Grey background color */
-  color: black; /* Black text color */
-  display: block; /* Make the links appear below each other */
-  padding: 12px; /* Add some padding */
-  text-decoration: none; /* Remove underline from links */
+  background-color: rgba(255, 0, 0, 0.76);
+  color: black; 
+  display: block;
+  padding: 12px; 
+  text-decoration: none; 
   right: 0;
   position:sticky;
 
@@ -236,7 +220,6 @@
   border-radius: 10px;
 }
 
-/* Fixed sidenav, full height */
 .sidenav {
   height: 100%;
   width: 10%;
@@ -249,7 +232,6 @@
   padding-top: 20px;
 }
 
-/* Style the sidenav links and the dropdown button */
 .sidenav a, .dropdown-btn {
   padding: 6px 8px 6px 16px;
   text-decoration: none;
@@ -264,48 +246,37 @@
   outline: none;
 }
 
-/* On mouse-over */
 .sidenav a:hover, .dropdown-btn:hover {
   color: #f1f1f1;
 }
 
-/* Main content */
 .main {
-  margin-left: 200px; /* Same as the width of the sidenav */
-  font-size: 20px; /* Increased text to enable scrolling */
+  margin-left: 200px; 
+  font-size: 20px; 
   padding: 0px 10px;
 }
 
-/* Add an active class to the active dropdown button */
 .actors-active {
   background-color: rgba(255, 0, 0, 0.76);
   color: white;
 }
 
-/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
 .dropdown-container {
   display: none;
   background-color: #262626;
   padding-left: 8px;
 }
 
-/* Optional: Style the caret down icon */
 .fa-caret-down {
   float: right;
   padding-right: 8px;
 }
 
-/* Some media queries for responsiveness */
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
 
-
-
-
-
-/* This is for the New Winners 2022 on Homepage*/
 .new-winners-section{
 	padding: 0 30px 0 60px;
 	display: flex;
@@ -335,7 +306,6 @@
 	font-size: 12px;
 }
 
-/*!---------THIS IS THE CSS FOR CAROUSEL + OTHERS THINGS */
 #popular-news{
 	display: flex;
 	flex-wrap: wrap;
@@ -438,8 +408,6 @@ section{
 	}
 }
 
-/*THIS IS FOR THE SEARCH BAR*/
-
 .search-bar{
   margin-left: 1cm;
   width: 100%;
@@ -479,7 +447,6 @@ section{
   cursor:pointer;
 }
 
-/* Buttons for csv svg and webp*/
 .button {
   background-color: #ff0000;
   border: none;
@@ -493,7 +460,6 @@ section{
   cursor: pointer;
 }
 
-/* Make it a marquee */
 .marquee {
   width:100%;
   margin: 0 auto;
@@ -516,7 +482,6 @@ section{
   animation-play-state: paused
 }
 
-/* Make it move */
 @keyframes marquee {
   0%   { transform: translate(0, 0); }
   100% { transform: translate(-100%, 0); }
