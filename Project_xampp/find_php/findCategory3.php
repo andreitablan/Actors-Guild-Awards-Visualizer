@@ -5,8 +5,11 @@ $client = new MongoDB\Client;
 $companydb = $client->mongodb;
 $users=$companydb->users;
 
+
+$an = $_GET["year"];
+
 $cursor = $users->find(
-    ['won' => 'True', 'category' => 'FEMALE ACTOR IN A LEADING ROLE']
+    ['won' => 'True', 'category' => 'FEMALE ACTOR IN A SUPPORTING ROLE','year' => new \MongoDB\BSON\Regex($an)]
 );
 
 $array = iterator_to_array($cursor);

@@ -137,65 +137,64 @@
         <br> 
     </section>
 
+
+  <form method="get">
+  Year: <input type="text" name="year"><br>
+  <input type="submit">
+  </form>
+
+
     <button type="button" class="collapsible">FEMALE ACTOR IN A LEADING ROLE</button>
     <div class="content">
-      <p>
-      <?php
-      include("find_php/find1.php") 
-      ?>
-      </p>
+      <p><?php include("find_php/findCategory1.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">MALE ACTOR IN A LEADING ROLE</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+      <p><?php include("find_php/findCategory2.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A SUPPORTING ROLE</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+      <p><?php include("find_php/findCategory3.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">MALE ACTOR IN A SUPPORTING ROLE</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+      <p><?php include("find_php/findCategory4.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A DRAMA SERIES</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+      <p><?php include("find_php/findCategory5.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">MALE ACTOR IN A DRAMA SERIES</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+      <p><?php include("find_php/findCategory6.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A COMEDY SERIES</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+      <p><?php include("find_php/findCategory7.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">MALE ACTOR IN A COMEDY SERIES</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+      <p><?php include("find_php/findCategory8.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+     <p><?php include("find_php/findCategory9.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+      <p><?php include("find_php/findCategory10.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">CAST IN A MOTION PICTURE</button>
     <div class="content">
-    <p>
-      <?php
-      include("find_php/find2.php") 
-      ?>
-      </p>
+    <p> <?php include("find_php/findCategory11.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">ENSEMBLE IN A COMEDY SERIES</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+      <p><?php include("find_php/findCategory12.php") ?> </p>
     </div>   
     <button type="button" class="collapsible">ENSEMBLE IN A DRAMA SERIES</button>
     <div class="content">
-      <p>Lorem ipsum...</p>
+      <p><?php include("find_php/findCategory13.php") ?> </p>
     </div>
 
     <script>
