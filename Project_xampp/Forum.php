@@ -14,7 +14,7 @@
   <body>
 
     <header id="showcase">
-      <h1>Login page</h1>
+      <h1>Forum page</h1>
     </header>
 
    <a href="#" class="toggle-button">
@@ -26,7 +26,7 @@
   <div class="burger">
     <a href="Home.php">Home</a>
     <a href="Winners.php">Winners</a>
-    <a href="Login.php">Login</a>
+    <a href="Forum.php">Forum</a>
     <a href="Statistics.php">Statistics</a>
   </div>
 
@@ -43,7 +43,7 @@
 <div class="sidenav">
   <a href="Home.php">Home</a>
   <a href="Winners.php">Winners</a>
-  <a href="Login.php">Login</a>
+  <a href="Forum.php">Forum</a>
   <a href="Statistics.php">Statistics</a>
   <button class="dropdown-btn">Actors
     <i class="fa fa-caret-down"></i>
