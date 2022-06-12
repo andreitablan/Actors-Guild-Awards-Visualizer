@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Actors Guild Awards Visualizer</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
   </head>
 
@@ -83,13 +84,13 @@ for (i = 0; i < dropdown.length; i++) {
 
 <button type="button" class="collapsible">Statistic Type 1</button>
 <div class="content">
-  <form>
+  <form method="get">
     <div class="fallbackYearPicker">
       <div>
         <span>
           <label for="year">Year:</label>
-          <select id="year" name="year">
-            <option selected>2022</option>
+          <select id="year" name="year" onchange='if(this.value != 0) { this.form.submit(); }'>
+            <option>2022</option>
             <option>2021</option>
             <option>2020</option>
             <option>2019</option>
@@ -122,6 +123,57 @@ for (i = 0; i < dropdown.length; i++) {
       </div>
     </div>
   </form> 
+  <?php 
+  
+  ?>
+  <div style="width: 500px;">
+  <canvas id="myChart" width="400" height="400"></canvas>
+  </div>
+  
+  <?php
+//somewhere set a value
+  require 'API/vendor/autoload.php';
+  include('API/config.php');
+  include_once('API/post.php');
+
+  $post= new Post($users);
+  $valuew=$post->howManyActorsWon()[0];
+  $valuen=$post->howManyActorsWon()[1]; 
+
+?>
+<script>
+  actorswon = '<?php echo $valuew ;?>';
+  actorsnotwon = '<?php echo $valuen ;?>';
+  //document.getElementById("nottablan").innerHTML=spge;
+
+ const data = {
+  labels:[
+    'Won',
+    'Did not win'
+  ],
+  datasets: [{
+    label: 'My First Dataset',
+    data:[actorswon,actorsnotwon],
+    backgroundColor: [
+      'rgb(255, 99, 132)',
+      'rgb(54, 162, 235)',
+      'rgb(255, 205, 86)'
+    ],
+    hoverOffset: 4
+  }]
+};
+
+  const config = {
+    type: 'pie',
+    data: data,
+    
+  };
+
+  var myChart = new Chart(
+    document.getElementById('myChart'),
+    config
+  );
+</script>
  <button class="button">Export as webpage</button>
   <button class="button">Export as SVG</button>
   <button class="button">Export as CSV</button>
@@ -180,7 +232,6 @@ for (i = 0; i < dropdown.length; i++) {
 </div>   
 
 
-
 <button type="button" class="collapsible">Statistic Type 3</button>
 <div class="content">
   <form>
@@ -221,7 +272,7 @@ for (i = 0; i < dropdown.length; i++) {
         </span>
       </div>
     </div>
-  </form> 
+  </form>
  <button class="button">Export as webpage</button>
   <button class="button">Export as SVG</button>
   <button class="button">Export as CSV</button>

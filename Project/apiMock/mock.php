@@ -11,7 +11,6 @@
 </head>
 <body>
     
-    <h1>Using TheMovieDB.org API v3</h1>
     <div id="output">
         <!-- output will go here -->
     </div>
@@ -19,31 +18,24 @@
     <p id="demo"></p>
     <p id="image"></p>
   
-
+    <?php echo $show?>
     <script>
-        var elements = document.querySelectorAll('[id="image"]');
-        var show = <?php echo json_encode($show); ?>;
-        /*************
-        SAMPLE URLS
         
-        1. To get the config data like image base urls
-        https://api.themoviedb.org/3/configuration?api_key=<APIKEY>
-        
-        2. To fetch a list of movies based on a keyword
-        https://api.themoviedb.org/3/search/movie?api_key=<APIKEY>&query=<keyword>
-        
-        3. To fetch more details about a movie
-        https://api.themoviedb.org/3/movie/<movie-id>?api_key=<APIKEY>
-        *************/
-        //const APIKEY is inside key.js
+       <?php echo "var show1 = '$show';"; ?>
+    
+       let show=show1;
+    
         let baseURL = 'https://api.themoviedb.org/3/';
         let configData = null;
         let baseImageURL = null;
         let APIKEY = "9ed4531cf7e78f63121a95b20dedc221";
         const mainE=document.getElementById('mainE')
-       
+        var mySomething = "smtg";
+        var myPhoto="a";
       
-        let getConfig = function () {
+        let getConfig = function (myShow) {
+          
+            myPhoto=myShow;
             let url = "".concat(baseURL, 'configuration?api_key=', APIKEY); 
             fetch(url)
             .then((result)=>{
@@ -68,25 +60,26 @@
                 return result.json()
             })
             .then((data)=>{
-                console.log('config:', data);
-                console.log('config fetched');
-                //document.getElementById('output').innerHTML = JSON.stringify(data, null, 4);
-                //work with results array...
-           
-                var myData = data.results[0].adult;
-                document.getElementById("demo").innerHTML = myData;
-                document.getElementById("image").innerHTML=
-                ``.concat('<img src="https://image.tmdb.org/t/p/w500',data.results[0].poster_path,'">');
-
                 
+            
+                var myData = data.results[0].adult;
+               
+                myPhoto = ``.concat('<img src="https://image.tmdb.org/t/p/w500',data.results[0].poster_path,'">');
+                document.getElementById("demo").innerHTML = myData;
+                document.getElementById("image").innerHTML= myPhoto;
             })
 
         }
 
-       getConfig();
 
+       getConfig(show);
+
+       
+       function getSmtg(){
+       return myPhoto;
+        }
         
-        document.addEventListener('DOMContentLoaded', getConfig);
+        //document.addEventListener('DOMContentLoaded', getConfig);
         /*******************************
         SAMPLE SEARCH RESULTS DATA
         { "vote_count": 2762, 

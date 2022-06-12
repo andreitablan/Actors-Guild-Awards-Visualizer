@@ -17,7 +17,6 @@
       <h1>Login page</h1>
     </header>
 
-     
    <a href="#" class="toggle-button">
     <span class="bar"></span>
     <span class="bar"></span>
@@ -25,10 +24,10 @@
  </a>
   
   <div class="burger">
-    <a href="Home.html">Home</a>
-    <a href="Winners.html">Winners</a>
-    <a href="Login.html">Login</a>
-    <a href="Statistics.html">Statistics</a>
+    <a href="Home.php">Home</a>
+    <a href="Winners.php">Winners</a>
+    <a href="Login.php">Login</a>
+    <a href="Statistics.php">Statistics</a>
   </div>
 
   <script>
@@ -42,10 +41,10 @@
   </script>
 
 <div class="sidenav">
-  <a href="Home.html">Home</a>
-  <a href="Winners.html">Winners</a>
-  <a href="Login.html">Login</a>
-  <a href="Statistics.html">Statistics</a>
+  <a href="Home.php">Home</a>
+  <a href="Winners.php">Winners</a>
+  <a href="Login.php">Login</a>
+  <a href="Statistics.php">Statistics</a>
   <button class="dropdown-btn">Actors
     <i class="fa fa-caret-down"></i>
   </button>

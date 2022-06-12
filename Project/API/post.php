@@ -29,5 +29,32 @@ class Post{
 
         return $array;
     }
+    public function howManyActorsWon(){
+        $myYear=$_GET["year"];
+
+        $won = $this->users->find(
+            ['won' => 'True', 'year' => new \MongoDB\BSON\Regex($myYear)]
+        );
+        $notwon = $this->users->find(
+            ['won' => 'False', 'year' => new \MongoDB\BSON\Regex($myYear)]
+        );
+        
+        $array1 = iterator_to_array($won);
+        $valuewon=0;
+        forEach($array1 as $value){
+            $valuewon++;
+        }
+        
+        $array2 = iterator_to_array($notwon);
+        $valuenotwon=0;
+        forEach($array2 as $value){
+            $valuenotwon++;
+        }
+        
+        $arraytosend=array($valuewon,$valuenotwon);
+
+        return $arraytosend;
+    }
+   
 }
 ?>

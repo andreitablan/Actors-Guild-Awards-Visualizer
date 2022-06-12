@@ -206,11 +206,15 @@
     <div class="content">
       <p><?php $category="FEMALE ACTOR IN A DRAMA SERIES";
       include("API/read.php") ?> </p>
+        <p id="image3">a</p>
+      <script>document.getElementById("image3").innerHTML= getSmtg();</script>
     </div>   
     <button type="button" class="collapsible">MALE ACTOR IN A DRAMA SERIES</button>
     <div class="content">
       <p><?php $category="MALE ACTOR IN A DRAMA SERIES";
       include("API/read.php") ?> </p>
+       <p id="image2">a</p>
+      <script>document.getElementById("image2").innerHTML= getSmtg();</script>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A COMEDY SERIES</button>
     <div class="content">
@@ -221,6 +225,8 @@
     <div class="content">
       <p><?php $category="MALE ACTOR IN A COMEDY SERIES";
       include("API/read.php") ?> </p>
+        <p id="image4">a</p>
+      <script>document.getElementById("image4").innerHTML= getSmtg();</script>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES</button>
     <div class="content">

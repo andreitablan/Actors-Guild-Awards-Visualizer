@@ -18,6 +18,7 @@ foreach($result as $value){
 
     $show = $value["show"];
     include('apiMock/mock.php');
+
 }
 
 ?>
