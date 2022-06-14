@@ -1,4 +1,6 @@
 <?php
+ini_set('display_errors', 0);
+
 class Post{
 
     private $users;
@@ -58,7 +60,7 @@ class Post{
     }
     public function getYear()
     {
-
+        
         $year = $_GET["year"];
         return $year;
     }
@@ -235,6 +237,7 @@ class Post{
                 $myimagelink = "Images/2022.jpg";
                 break;
             }
+    if(isset($_GET["year"])){
      $arraytosend = array($mynewslink, $myimagelink);
      //return $arraytosend;
      //echo $mynewslink;
@@ -248,6 +251,6 @@ class Post{
      //echo '<img src=';  echo $myimagelink;  echo '>';
      //echo '</a>';
     }
-   
+  }
 }
 ?>
