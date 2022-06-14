@@ -40,18 +40,18 @@
 
   </script>
 
+
 <div class="sidenav">
   <a href="Home.php">Home</a>
   <a href="Winners.php">Winners</a>
   <a href="Forum.php">Forum</a>
-  <a href="Statistics.php">Statistics</a>
-  <button class="dropdown-btn">Actors
+  <button class="dropdown-btn">Statistics
     <i class="fa fa-caret-down"></i>
   </button>
   <div class="dropdown-container">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+    <a href="Statistics1.php">Statistic 1</a>
+    <a href="Statistics2.php">Statistic 2</a>
+    <a href="Statistics3.php">Statistic 3</a>
   </div>
 </div>
 

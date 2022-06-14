@@ -16,7 +16,6 @@
     </div>
 
     <p id="demo"></p>
-    <p id="image"></p>
   
     <?php echo $show?>
     <script>
@@ -65,8 +64,9 @@
                 var myData = data.results[0].adult;
                
                 myPhoto = ``.concat('<img src="https://image.tmdb.org/t/p/w500',data.results[0].poster_path,'">');
-                document.getElementById("demo").innerHTML = myData;
-                document.getElementById("image").innerHTML= myPhoto;
+
+                //document.getElementById("image1").innerHTML=myPhoto;
+               
             })
 
         }

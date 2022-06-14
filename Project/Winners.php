@@ -30,6 +30,7 @@
       <a href="Winners.php">Winners</a>
       <a href="Forum.php">Forum</a>
       <a href="Statistics.php">Statistics</a>
+      <a href="Movie.php">Movie Details</a>
   </div>
 
   <script>
@@ -47,15 +48,15 @@
       <a href="Home.php">Home</a>
       <a href="Winners.php">Winners</a>
       <a href="Forum.php">Forum</a>
-      <a href="Statistics.php">Statistics</a>
-      <button class="dropdown-btn">Actors
-        <i class="fa fa-caret-down"></i>
-      </button>
-      <div class="dropdown-container">
-        <a href="#">Link 1</a>
-        <a href="#">Link 2</a>
-        <a href="#">Link 3</a>
-      </div>
+      <a href="Movie.php">Movie Details</a>
+      <button class="dropdown-btn">Statistics
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="Statistics1.php">Statistic 1</a>
+    <a href="Statistics2.php">Statistic 2</a>
+    <a href="Statistics3.php">Statistic 3</a>
+  </div>
     </div>
     
 
@@ -184,37 +185,34 @@
 
     <button type="button" class="collapsible">FEMALE ACTOR IN A LEADING ROLE</button>
     <div class="content">  
-      <p><?php $category="FEMALE ACTOR IN A LEADING ROLE";
-      include("API/read.php") ?> </p>
-    </div>   
+      <?php $category="FEMALE ACTOR IN A LEADING ROLE";
+      include("API/read.php");?> </p>
+      </div>
     <button type="button" class="collapsible">MALE ACTOR IN A LEADING ROLE</button>
     <div class="content">
       <p><?php  $category="MALE ACTOR IN A LEADING ROLE";
-      include("API/read.php") ?> </p> 
+      include("API/read.php");?> <p>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A SUPPORTING ROLE</button>
     <div class="content">
       <p><?php   $category="FEMALE ACTOR IN A SUPPORTING ROLE";
-      include("API/read.php") ?> </p> 
+      include("API/read.php");
+      ?> </p> 
     </div>   
     <button type="button" class="collapsible">MALE ACTOR IN A SUPPORTING ROLE</button>
     <div class="content">
       <p><?php $category="MALE ACTOR IN A SUPPORTING ROLE";
-      include("API/read.php")?> </p>
+      include("API/read.php");?> </p>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A DRAMA SERIES</button>
     <div class="content">
       <p><?php $category="FEMALE ACTOR IN A DRAMA SERIES";
-      include("API/read.php") ?> </p>
-        <p id="image3">a</p>
-      <script>document.getElementById("image3").innerHTML= getSmtg();</script>
+      include("API/read.php"); ?> </p>
     </div>   
     <button type="button" class="collapsible">MALE ACTOR IN A DRAMA SERIES</button>
     <div class="content">
       <p><?php $category="MALE ACTOR IN A DRAMA SERIES";
       include("API/read.php") ?> </p>
-       <p id="image2">a</p>
-      <script>document.getElementById("image2").innerHTML= getSmtg();</script>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A COMEDY SERIES</button>
     <div class="content">
@@ -225,8 +223,6 @@
     <div class="content">
       <p><?php $category="MALE ACTOR IN A COMEDY SERIES";
       include("API/read.php") ?> </p>
-        <p id="image4">a</p>
-      <script>document.getElementById("image4").innerHTML= getSmtg();</script>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES</button>
     <div class="content">
@@ -272,7 +268,73 @@
         </script>
         
         
-   
+        <script>
+     
+      
+       
+         let getConfig = function (myShow) {
+           
+             myPhoto=myShow;
+             let url = "".concat(baseURL, 'configuration?api_key=', APIKEY); 
+             fetch(url)
+             .then((result)=>{
+                 return result.json();
+             })
+             .then((data)=>{
+                 baseImageURL = data.images.secure_base_url;
+                 configData = data.images;
+                 console.log('config:', data);
+                 console.log('config fetched');
+                 runSearch(show);
+             })
+             .catch(function(err){
+                 alert(err);
+             });
+         }
+         
+         let runSearch = function (keyword) {
+             let url = ''.concat(baseURL, 'search/movie?api_key=', APIKEY, '&query=', keyword);
+             fetch(url)
+             .then((result)=>{
+                 return result.json()
+             })
+             .then((data)=>{
+                 
+             
+                 var myData = data.results[0].adult;
+                
+                 myPhoto = ``.concat('<img src="https://image.tmdb.org/t/p/w500',data.results[0].poster_path,'">');
+
+                 document.getElementById("image1").innerHTML=myPhoto;
+             })
+ 
+         }
+        
+        function getSmtg(){
+        return myPhoto;
+         }
+         
+         //document.addEventListener('DOMContentLoaded', getConfig);
+         /*******************************
+         SAMPLE SEARCH RESULTS DATA
+         { "vote_count": 2762, 
+             "id": 578, 
+             "video": false, 
+             "vote_average": 7.5, 
+             "title": "Jaws", 
+             "popularity": 16.273358, 
+             "poster_path": "/l1yltvzILaZcx2jYvc5sEMkM7Eh.jpg", 
+             "original_language": "en", 
+             "original_title": "Jaws", 
+             "genre_ids": [ 27, 53, 12 ], 
+             "backdrop_path": "/slkPgAt1IQgxZXNrazEcOzhAK8f.jpg", 
+             "adult": false, 
+             "overview": "An insatiable great white shark terrorizes the townspeople of Amity Island, The police chief, an oceanographer and a grizzled shark hunter seek to destroy the bloodthirsty beast.", 
+             "release_date": "1975-06-18" 
+         }
+         *******************************/
+       
+     </script>
   </body>
 
 </html>
