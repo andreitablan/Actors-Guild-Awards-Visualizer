@@ -29,6 +29,7 @@
     <a href="Home.php">Home</a>
     <a href="Winners.php">Winners</a>
     <a href="Forum.php">Forum</a>
+    <a href="Movie.php">Movie Details</a>
   </div>
 
   <script>
@@ -45,6 +46,7 @@
   <a href="Home.php">Home</a>
   <a href="Winners.php">Winners</a>
   <a href="Forum.php">Forum</a>
+  <a href="Movie.php">Movie Details</a>
   <button class="dropdown-btn">Statistics
     <i class="fa fa-caret-down"></i>
   </button>
@@ -173,6 +175,8 @@ for (i = 0; i < dropdown.length; i++) {
     type: 'pie',
     data: data,
     options: {
+        animation:false,
+        responsive:false,
       title: {
          display: true,
          text: 'Chart Title'
@@ -259,6 +263,96 @@ let svgData: string = chart.svgObject.outerHTML;
     document.body.removeChild(downloadLink); 
 }
 */
+
+
+<?php
+  require 'API/vendor/autoload.php';
+  include('API/config.php');
+  include_once('API/post.php');
+
+  $post= new Post($users);
+
+  $men=$post->getMen();
+  $women=$post->getWomen(); 
+
+  $year=$post->getYear(); 
+
+
+?>
+
+function downloadSVG(){
+    //let svgData= chart;
+
+    people = '<?php echo $women; echo $men ;?>';
+    svgData =  '<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /> Sorry, your browser does not support inline SVG. <text x="20" y="35" class="small">'
+    
+    
+    //let svgData= chart.outerHTML; 
+    svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + svgData + people + "</text> </svg>"; 
+
+    let svgBlob = new Blob([svgData], {type:"image/svg+xml;charset=utf-8"}); 
+    let svgUrl= URL.createObjectURL(svgBlob); 
+    let downloadLink= document.createElement('a'); 
+    downloadLink.href = svgUrl; 
+    downloadLink.download = 'chart.svg'; 
+    document.body.appendChild(downloadLink); 
+    downloadLink.click(); 
+    document.body.removeChild(downloadLink); 
+}
+
+
+/*function downloadSVG(){
+    if (chart.options.animation !== false) {
+    console.warn('Cannot create SVG: "animation" is not set to false (see the options section)');
+    return;
+  }
+  if (chart.options.responsive !== false) {
+    console.warn('Cannot create SVG: "responsive" is not set to false (see the options section)');
+    return;
+  }
+
+  tweakLib();
+
+  // get the dimensions of our original chart
+  let chartCanvas = document.getElementById('canvas');
+  let width =  chartCanvas.offsetWidth;
+  let height = chartCanvas.offsetHeight;
+
+  // create an svg version of the chart
+  let svgContext = C2S(width, height);
+  let svgChart = new Chart(svgContext, chartSettings);
+
+  // create download link
+  let link = document.createElement('a');
+  link.href = 'data:image/svg+xml;utf8,' + encodeURIComponent(svgContext.getSerializedSvg());
+  link.download = filename;
+  link.text = linkText;
+
+  // add link to the page
+  document.body.appendChild(link);
+  link.click();
+}
+
+function tweakLib() {
+  C2S.prototype.getContext = function(contextId) {
+    if (contextId === '2d' || contextId === '2D') {
+      return this;
+    }
+    return null;
+  }
+  C2S.prototype.style = function() {
+    return this.__canvas.style;
+  }
+  C2S.prototype.getAttribute = function(name) {
+    return this[name];
+  }
+  C2S.prototype.addEventListener = function(type, listener, eventListenerOptions) {
+   
+  }
+}*/
+
+
+
 function downloadWebP(){
   chart.options.title.text = 'New Chart Title';
    chart.update({

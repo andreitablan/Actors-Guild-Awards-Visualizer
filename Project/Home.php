@@ -33,7 +33,6 @@
       <a href="Home.php">Home</a>
       <a href="Winners.php">Winners</a>
       <a href="Forum.php">Forum</a>
-      <a href="Statistics.php">Statistics</a>
       <a href="Movie.php">Movie Details</a>
 
     </div>

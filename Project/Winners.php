@@ -135,7 +135,7 @@
     <div class="fallbackYearPicker">
       <div>
         <span>
-          <label for="year">Year:</label>
+          <label for="year">&emsp;Year:</label>
           <select id="year" name="year" onchange='if(this.value != 0) { this.form.submit(); }'>
             <option selected>2022</option>
             <option>2021</option>
@@ -145,7 +145,7 @@
             <option>2017</option>
             <option>2016</option>
             <option>2015</option>
-            <option>2015</option>
+            <option>2014</option>
             <option>2013</option>
             <option>2012</option>
             <option>2011</option>
@@ -173,6 +173,12 @@
   <br>
 
 
+  <?php 
+    include_once('API/post.php');
+      include("API/config.php");
+      $post= new Post($users);
+      $post->showNews();?>
+
     <section id="section-b">
       <h3 id="header">&emsp;Winners for year: <span id = "yearSelected">(select a year)</span></h3>
         <br> 
@@ -182,16 +188,18 @@
     </section>
 
 
-
     <button type="button" class="collapsible">FEMALE ACTOR IN A LEADING ROLE</button>
     <div class="content">  
       <?php $category="FEMALE ACTOR IN A LEADING ROLE";
-      include("API/read.php");?> </p>
+      include("API/read.php");
+      ?>
+    </p>
       </div>
     <button type="button" class="collapsible">MALE ACTOR IN A LEADING ROLE</button>
     <div class="content">
       <p><?php  $category="MALE ACTOR IN A LEADING ROLE";
-      include("API/read.php");?> <p>
+      include("API/read.php");
+      ?> <p>
     </div>   
     <button type="button" class="collapsible">FEMALE ACTOR IN A SUPPORTING ROLE</button>
     <div class="content">

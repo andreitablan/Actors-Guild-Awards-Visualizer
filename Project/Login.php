@@ -27,7 +27,6 @@
     <a href="Home.php">Home</a>
     <a href="Winners.php">Winners</a>
     <a href="Login.php">Login</a>
-    <a href="Statistics.php">Statistics</a>
     <a href="Movie.php">Movie Details</a>
   </div>
 
