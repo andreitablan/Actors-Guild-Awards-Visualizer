@@ -92,7 +92,7 @@
 
     <div class="search-container">
       <form action="https://www.google.com/search?q=+Screen+Actors+Guild+Awards" method="get" class="search-bar">
-        <input type="text" placeholder="Search for an actor..." name="q">
+        <input type="text" placeholder="Search for news..." name="q">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
       <br>

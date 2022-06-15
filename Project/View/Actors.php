@@ -80,10 +80,10 @@
         }
     </script>
 
+<h2><b>&emsp; Welcome to the actor page</b></h2>
+
     <section id="section-a">
         <p>
-
-        <h2><b>&emsp; Welcome ot the actor page</b></h2>
 
         <div class="search-container">
             </form>
