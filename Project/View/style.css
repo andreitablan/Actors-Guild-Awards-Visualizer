@@ -15,7 +15,7 @@ body {
 
 
 #showcase {
-  background-image: url('Images/image5.png');
+  background-image: url('../Resources/Images/image5.png');
   background-size: cover;
   background-position: center;
   height: 50vh;

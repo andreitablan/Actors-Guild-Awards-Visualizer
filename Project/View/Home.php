@@ -121,7 +121,7 @@
           <h2>FEATURED</h2>
           <div class="news-container">
             <a href="https://screenrant.com/oscars-actors-who-won-sag-award-but-not-oscar/">
-              <img src="Images/GeneralNewsFeatured.png" alt="HTML tutorial">
+              <img src="../Resources/Images/GeneralNewsFeatured.png" alt="HTML tutorial">
             </a>
             <p class="carousel-text">10 Actors Who Won The SAG Award But Not The Oscar!</p>
           </div>
@@ -134,7 +134,7 @@
           <h2>LATEST</h2>
           <div class="news-container">
             <a href="https://www.hollywoodreporter.com/movies/movie-news/sag-awards-2022-nominations-list-nominees-1235073685/">
-              <img src="Images/GeneralNewsFeatured1.png" alt="HTML tutorial">
+              <img src="../Resources/Images/GeneralNewsFeatured1.png" alt="HTML tutorial">
             </a>
             <p class="carousel-text">Nominalizations!</p>
           </div>
@@ -142,7 +142,7 @@
 
           <div class="news-container">
             <a href="https://www.eonline.com/news/sag_awards">
-              <img src="Images/GeneralNewsLatest2.png" alt="HTML tutorial">
+              <img src="../Resources/Images/GeneralNewsLatest2.png" alt="HTML tutorial">
             </a>
             <p class="carousel-text">SAG AWARDS 2022 RED CARPET FASHION!</p>
           </div>

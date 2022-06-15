@@ -138,8 +138,8 @@
 
 
   <?php
-  include_once('API/post.php');
-  include("API/config.php");
+  include_once('../Model/post.php');
+  include("../Model/config.php");
   $post = new Post($users);
   $post->showNews(); ?>
 
@@ -152,72 +152,72 @@
   <button type="button" class="collapsible">FEMALE ACTOR IN A LEADING ROLE</button>
   <div class="content">
     <?php $category = "FEMALE ACTOR IN A LEADING ROLE";
-    include("API/read.php");
+    include("../Controller/read.php");
     ?>
     </p>
   </div>
   <button type="button" class="collapsible">MALE ACTOR IN A LEADING ROLE</button>
   <div class="content">
     <p><?php $category = "MALE ACTOR IN A LEADING ROLE";
-        include("API/read.php");
+        include("../Controller/read.php");
         ?>
     <p>
   </div>
   <button type="button" class="collapsible">FEMALE ACTOR IN A SUPPORTING ROLE</button>
   <div class="content">
     <p><?php $category = "FEMALE ACTOR IN A SUPPORTING ROLE";
-        include("API/read.php");
+        include("../Controller/read.php");
         ?> </p>
   </div>
   <button type="button" class="collapsible">MALE ACTOR IN A SUPPORTING ROLE</button>
   <div class="content">
     <p><?php $category = "MALE ACTOR IN A SUPPORTING ROLE";
-        include("API/read.php"); ?> </p>
+        include("../Controller/read.php"); ?> </p>
   </div>
   <button type="button" class="collapsible">FEMALE ACTOR IN A DRAMA SERIES</button>
   <div class="content">
     <p><?php $category = "FEMALE ACTOR IN A DRAMA SERIES";
-        include("API/read.php"); ?> </p>
+        include("../Controller/read.php"); ?> </p>
   </div>
   <button type="button" class="collapsible">MALE ACTOR IN A DRAMA SERIES</button>
   <div class="content">
     <p><?php $category = "MALE ACTOR IN A DRAMA SERIES";
-        include("API/read.php") ?> </p>
+        include("../Controller/read.php") ?> </p>
   </div>
   <button type="button" class="collapsible">FEMALE ACTOR IN A COMEDY SERIES</button>
   <div class="content">
     <p><?php $category = "FEMALE ACTOR IN A COMEDY SERIES";
-        include("API/read.php") ?> </p>
+        include("../Controller/read.php") ?> </p>
   </div>
   <button type="button" class="collapsible">MALE ACTOR IN A COMEDY SERIES</button>
   <div class="content">
     <p><?php $category = "MALE ACTOR IN A COMEDY SERIES";
-        include("API/read.php") ?> </p>
+        include("../Controller/read.php") ?> </p>
   </div>
   <button type="button" class="collapsible">FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES</button>
   <div class="content">
     <p><?php $category = "FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES";
-        include("API/read.php") ?> </p>
+        include("../Controller/read.php") ?> </p>
   </div>
   <button type="button" class="collapsible">MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES</button>
   <div class="content">
     <p><?php $category = "MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES";
-        include("API/read.php") ?> </p>
+        include("../Controller/read.php") ?> </p>
   </div>
   <button type="button" class="collapsible">CAST IN A MOTION PICTURE</button>
   <div class="content">
     <p> <?php $category = "CAST IN A MOTION PICTURE";
-        include("API/read.php") ?> </p>
+        include("../Controller/read.php") ?> </p>
   </div>
   <button type="button" class="collapsible">ENSEMBLE IN A COMEDY SERIES</button>
   <div class="content">
     <p><?php $category = "ENSEMBLE IN A COMEDY SERIES";
-        include("API/read.php") ?> </p>
+        include("../Controller/read.php") ?> </p>
   </div>
   <button type="button" class="collapsible">ENSEMBLE IN A DRAMA SERIES</button>
   <div class="content">
     <p><?php $category = "ENSEMBLE IN A DRAMA SERIES";
-        include("API/read.php") ?> </p>
+        include("../Controller/read.php") ?> </p>
   </div>
 
   <script>

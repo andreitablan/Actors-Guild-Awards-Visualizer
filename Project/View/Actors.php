@@ -96,8 +96,8 @@
     <main id="maine">
         <div class="actor">
             <img src="" alt="Image">
-            <a href="https://www.qries.com/">
-                <img alt="IMDB" src="Images/IMDB.png" width="150" height="70">
+            <a href="">
+                <img alt="IMDB" src="" width="150" height="70">
             </a>
             <div class="id"></div>
             <div class="biography"></div>
@@ -186,7 +186,7 @@
                     actorEl.innerHTML = `
              <img src="${myPhoto}" alt="Image">
              <a href="${myIMDB}">
-                <img alt="IMDB" src="Images/IMDB.png" width="150" height="70">
+                <img alt="IMDB" src="../Resources/Images/IMDB.png" width="150" height="70">
              </a>
             <div class="biography">Biography: ${biography}</div>
             <div class="birthday">Birthday: ${birthday}</div>

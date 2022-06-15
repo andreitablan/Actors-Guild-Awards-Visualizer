@@ -15,7 +15,7 @@
 <body>
 
   <header id="showcase">
-    <h1>Statistics2</h1>
+    <h1>Statistics1</h1>
   </header>
 
 
@@ -41,7 +41,6 @@
       Burger2.classList.toggle('active')
     })
   </script>
-
 
   <div class="sidenav">
     <a href="Home.php">Home</a>
@@ -84,7 +83,7 @@
     <br>
   </section>
 
-  <button type="button" class="collapsible">How many persons were nominated to each category</button>
+  <button type="button" class="collapsible">How many actors won</button>
   <div class="content">
     <form method="get">
       <div class="fallbackYearPicker">
@@ -101,7 +100,7 @@
               <option>2017</option>
               <option>2016</option>
               <option>2015</option>
-              <option>2014</option>
+              <option>2015</option>
               <option>2013</option>
               <option>2012</option>
               <option>2011</option>
@@ -129,31 +128,19 @@
     <?php
 
     ?>
-    <div style="width: 600px;">
+    <div style="width: 500px;">
       <canvas id="chart" width="400" height="400"></canvas>
     </div>
 
-
     <?php
-    require 'API/vendor/autoload.php';
-    include('API/config.php');
-    include_once('API/post.php');
+    //somewhere set a value
+    require '../vendor/autoload.php';
+    include('../Model/config.php');
+    include_once('../Model/post.php');
 
     $post = new Post($users);
-
-    $category1 = $post->getPersonsByCategory("FEMALE ACTOR IN A LEADING ROLE");
-    $category2 = $post->getPersonsByCategory("MALE ACTOR IN A LEADING ROLE");
-    $category3 = $post->getPersonsByCategory("FEMALE ACTOR IN A SUPPORTING ROLE");
-    $category4 = $post->getPersonsByCategory("MALE ACTOR IN A SUPPORTING ROLE");
-    $category5 = $post->getPersonsByCategory("FEMALE ACTOR IN A DRAMA SERIES");
-    $category6 = $post->getPersonsByCategory("MALE ACTOR IN A DRAMA SERIES");
-    $category7 = $post->getPersonsByCategory("FEMALE ACTOR IN A COMEDY SERIES");
-    $category8 = $post->getPersonsByCategory("MALE ACTOR IN A COMEDY SERIES");
-    $category9 = $post->getPersonsByCategory("FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES");
-    $category10 = $post->getPersonsByCategory("MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES");
-    $category11 = $post->getPersonsByCategory("CAST IN A MOTION PICTURE");
-    $category12 = $post->getPersonsByCategory("ENSEMBLE IN A COMEDY SERIES");
-    $category13 = $post->getPersonsByCategory("ENSEMBLE IN A DRAMA SERIES");
+    $valuew = $post->howManyActorsWon()[0];
+    $valuen = $post->howManyActorsWon()[1];
     $year = $post->getYear();
 
 
@@ -163,109 +150,48 @@
     <button id="downloadCSV" class="button">Export as CSV</button>
     <button id="downloadPNG" class="button">Export as PNG</button>
 
+
     <script>
-      category1 = '<?php echo $category1; ?>';
-      category2 = '<?php echo $category2; ?>';
-      category3 = '<?php echo $category3; ?>';
-      category4 = '<?php echo $category4; ?>';
-      category5 = '<?php echo $category5; ?>';
-      category6 = '<?php echo $category6; ?>';
-      category7 = '<?php echo $category7; ?>';
-      category8 = '<?php echo $category8; ?>';
-      category9 = '<?php echo $category9; ?>';
-      category10 = '<?php echo $category10; ?>';
-      category11 = '<?php echo $category11; ?>';
-      category12 = '<?php echo $category12; ?>';
-      category13 = '<?php echo $category13; ?>';
+      actorswon = '<?php echo $valuew; ?>';
+      actorsnotwon = '<?php echo $valuen; ?>';
       year = '<?php echo $year; ?>';
       const data = {
         labels: [
-          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+          'Won',
+          'Did not win'
         ],
         datasets: [{
-            label: '1 - FEMALE ACTOR IN A LEADING ROLE',
-
-
-            data: [category1, category2, category3, category4, category5, category6, category7, category8, category9, category10, category11, category12, category13],
-            backgroundColor: [
-              'rgba(255, 99, 132, 0.2)',
-              'rgba(255, 159, 64, 0.2)',
-              'rgba(255, 205, 86, 0.2)',
-              'rgba(75, 192, 192, 0.2)',
-              'rgba(54, 162, 235, 0.2)',
-              'rgba(153, 102, 255, 0.2)',
-              'rgba(201, 203, 207, 0.2)'
-            ],
-            borderColor: [
-              'rgb(255, 99, 132)',
-              'rgb(255, 159, 64)',
-              'rgb(255, 205, 86)',
-              'rgb(75, 192, 192)',
-              'rgb(54, 162, 235)',
-              'rgb(153, 102, 255)',
-              'rgb(201, 203, 207)'
-            ],
-            borderWidth: 1
-          }, {
-            label: '2 - MALE ACTOR IN A LEADING ROLE'
-          },
-          {
-            label: '3 - FEMALE ACTOR IN A SUPPORTING ROLE'
-          },
-          {
-            label: '4 - MALE ACTOR IN A SUPPORTING ROLE'
-          },
-          {
-            label: '5 - FEMALE ACTOR IN A DRAMA SERIES'
-          },
-          {
-            label: '6 - MALE ACTOR IN A DRAMA SERIES'
-          },
-          {
-            label: '7 - FEMALE ACTOR IN A COMEDY SERIES'
-          },
-          {
-            label: '8 - MALE ACTOR IN A COMEDY SERIES'
-          },
-          {
-            label: '9 - FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES'
-          },
-          {
-            label: '10 - MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES'
-          },
-          {
-            label: '11 - CAST IN A MOTION PICTURE'
-          },
-          {
-            label: '12 - ENSEMBLE IN A COMEDY SERIES'
-          },
-          {
-            label: '13 - ENSEMBLE IN A DRAMA SERIES'
-          }
-        ]
+          label: 'My First Dataset',
+          data: [actorswon, actorsnotwon],
+          backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+          ],
+          hoverOffset: 4
+        }]
 
       };
+
       const config = {
-        type: 'bar',
+        type: 'pie',
         data: data,
         options: {
+          animation: false,
+          responsive: false,
           title: {
             display: true,
             text: 'Chart Title'
           },
           scales: {
-            y: {
-              beginAtZero: true
-            }
-          },
-          plugins: {
-            legend: {
-              display: true,
-              position: 'right',
-              color: 'red'
-            }
+            yAxes: [{
+              ticks: {
+                beginAtZero: true,
+                stepSize: 1
+              }
+            }]
           }
-        },
+        }
       };
 
       var chart = new Chart(
@@ -276,20 +202,9 @@
       document.getElementById("downloadCSV").addEventListener("click", function() {
         downloadCSV({
           filename: "chart-data.csv",
-          year,
-          category1,
-          category2,
-          category3,
-          category4,
-          category5,
-          category6,
-          category7,
-          category8,
-          category9,
-          category10,
-          category11,
-          category12,
-          category13
+          actorswon,
+          actorsnotwon,
+          year
         })
       });
       document.getElementById("downloadPNG").addEventListener("click", function() {
@@ -304,12 +219,14 @@
 
       function downloadCSV(args) {
         var data, filename, link;
-        var csv = "year,FEMALE ACTOR IN A LEADING ROLE,MALE ACTOR IN A LEADING ROLE,FEMALE ACTOR IN A SUPPORTING ROLE,MALE ACTOR IN A SUPPORTING ROLE,FEMALE ACTOR IN A DRAMA SERIES,MALE ACTOR IN A DRAMA SERIES,FEMALE ACTOR IN A COMEDY SERIES,MALE ACTOR IN A COMEDY SERIES,FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES,MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES,CAST IN A MOTION PICTURE,ENSEMBLE IN A COMEDY SERIES,ENSEMBLE IN A DRAMA SERIES\n";
-        csv += year + "," + category1 + "," + category2 + "," + category3 + "," + category4 + "," + category5 + "," + category6 + "," + category7 + "," + category8 + "," + category9 + "," + category10 + "," + category11 + "," + category12 + "," + category13;
-
+        var csv = "";
         if (csv == null) return;
-
-        filename = 'chart-data.csv';
+        filename = args.filename || 'chart-data.csv';
+        actorsdidwin = args.actorswon;
+        actorsdidnotwin = args.actorsnotwon;
+        year = args.year;
+        csv += "year,numberactorswon,numberactorsdidnotwin\n";
+        csv += year + "," + actorsdidwin + "," + actorsdidnotwin;
 
         if (!csv.match(/^data:text\/csv/i)) {
           csv = 'data:text/csv;charset=utf-8,' + csv;
@@ -324,8 +241,9 @@
         document.body.removeChild(link);
       }
 
+
       function downloadPNG() {
-        chart.options.title.text = 'How many people';
+        chart.options.title.text = 'New Chart Title';
         chart.update({
           duration: 0
         });
@@ -352,6 +270,99 @@
           document.body.removeChild(downloadLink); 
       }
       */
+
+
+      <?php
+      require '../vendor/autoload.php';
+      include('../Model/config.php');
+      include_once('../Model/post.php');
+
+      $post = new Post($users);
+
+      $men = $post->getMen();
+      $women = $post->getWomen();
+
+      $year = $post->getYear();
+
+
+      ?>
+
+      function downloadSVG() {
+        //let svgData= chart;
+
+        people = '<?php echo $women;
+                  echo $men; ?>';
+        svgData = '<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /> Sorry, your browser does not support inline SVG. <text x="20" y="35" class="small">'
+
+
+        //let svgData= chart.outerHTML; 
+        svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + svgData + people + "</text> </svg>";
+
+        let svgBlob = new Blob([svgData], {
+          type: "image/svg+xml;charset=utf-8"
+        });
+        let svgUrl = URL.createObjectURL(svgBlob);
+        let downloadLink = document.createElement('a');
+        downloadLink.href = svgUrl;
+        downloadLink.download = 'chart.svg';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      }
+
+
+      /*function downloadSVG(){
+          if (chart.options.animation !== false) {
+          console.warn('Cannot create SVG: "animation" is not set to false (see the options section)');
+          return;
+        }
+        if (chart.options.responsive !== false) {
+          console.warn('Cannot create SVG: "responsive" is not set to false (see the options section)');
+          return;
+        }
+
+        tweakLib();
+
+        // get the dimensions of our original chart
+        let chartCanvas = document.getElementById('canvas');
+        let width =  chartCanvas.offsetWidth;
+        let height = chartCanvas.offsetHeight;
+
+        // create an svg version of the chart
+        let svgContext = C2S(width, height);
+        let svgChart = new Chart(svgContext, chartSettings);
+
+        // create download link
+        let link = document.createElement('a');
+        link.href = 'data:image/svg+xml;utf8,' + encodeURIComponent(svgContext.getSerializedSvg());
+        link.download = filename;
+        link.text = linkText;
+
+        // add link to the page
+        document.body.appendChild(link);
+        link.click();
+      }
+
+      function tweakLib() {
+        C2S.prototype.getContext = function(contextId) {
+          if (contextId === '2d' || contextId === '2D') {
+            return this;
+          }
+          return null;
+        }
+        C2S.prototype.style = function() {
+          return this.__canvas.style;
+        }
+        C2S.prototype.getAttribute = function(name) {
+          return this[name];
+        }
+        C2S.prototype.addEventListener = function(type, listener, eventListenerOptions) {
+         
+        }
+      }*/
+
+
+
       function downloadWebP() {
         chart.options.title.text = 'New Chart Title';
         chart.update({
@@ -368,7 +379,9 @@
       }
     </script>
 
+
   </div>
+
 
   <script>
     var coll = document.getElementsByClassName("collapsible");

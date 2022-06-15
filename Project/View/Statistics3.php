@@ -15,7 +15,7 @@
 <body>
 
   <header id="showcase">
-    <h1>Statistics1</h1>
+    <h1>Statistics3</h1>
   </header>
 
 
@@ -83,7 +83,7 @@
     <br>
   </section>
 
-  <button type="button" class="collapsible">How many actors won</button>
+  <button type="button" class="collapsible">How many men and women were nominated</button>
   <div class="content">
     <form method="get">
       <div class="fallbackYearPicker">
@@ -100,7 +100,7 @@
               <option>2017</option>
               <option>2016</option>
               <option>2015</option>
-              <option>2015</option>
+              <option>2014</option>
               <option>2013</option>
               <option>2012</option>
               <option>2011</option>
@@ -128,19 +128,21 @@
     <?php
 
     ?>
-    <div style="width: 500px;">
+    <div style="width: 600px;">
       <canvas id="chart" width="400" height="400"></canvas>
     </div>
 
+
     <?php
-    //somewhere set a value
-    require 'API/vendor/autoload.php';
-    include('API/config.php');
-    include_once('API/post.php');
+    require '../vendor/autoload.php';
+    include('../Model/config.php');
+    include_once('../Model/post.php');
 
     $post = new Post($users);
-    $valuew = $post->howManyActorsWon()[0];
-    $valuen = $post->howManyActorsWon()[1];
+
+    $men = $post->getMen();
+    $women = $post->getWomen();
+
     $year = $post->getYear();
 
 
@@ -150,48 +152,36 @@
     <button id="downloadCSV" class="button">Export as CSV</button>
     <button id="downloadPNG" class="button">Export as PNG</button>
 
-
     <script>
-      actorswon = '<?php echo $valuew; ?>';
-      actorsnotwon = '<?php echo $valuen; ?>';
+      men = '<?php echo $men; ?>';
+      women = '<?php echo $women; ?>';
+
       year = '<?php echo $year; ?>';
       const data = {
-        labels: [
-          'Won',
-          'Did not win'
-        ],
+        labels: ['men', 'women'],
         datasets: [{
-          label: 'My First Dataset',
-          data: [actorswon, actorsnotwon],
-          backgroundColor: [
-            'rgb(255, 99, 132)',
-            'rgb(54, 162, 235)',
-            'rgb(255, 205, 86)'
-          ],
-          hoverOffset: 4
+          label: 'Difference between number of men and women',
+          data: [men, women],
+          fill: false,
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1
         }]
 
       };
-
       const config = {
-        type: 'pie',
+        type: 'line',
         data: data,
         options: {
-          animation: false,
-          responsive: false,
           title: {
             display: true,
             text: 'Chart Title'
           },
           scales: {
-            yAxes: [{
-              ticks: {
-                beginAtZero: true,
-                stepSize: 1
-              }
-            }]
+            y: {
+              beginAtZero: true
+            }
           }
-        }
+        },
       };
 
       var chart = new Chart(
@@ -202,9 +192,9 @@
       document.getElementById("downloadCSV").addEventListener("click", function() {
         downloadCSV({
           filename: "chart-data.csv",
-          actorswon,
-          actorsnotwon,
-          year
+          year,
+          men,
+          women
         })
       });
       document.getElementById("downloadPNG").addEventListener("click", function() {
@@ -217,16 +207,17 @@
         downloadWebP();
       });
 
+
       function downloadCSV(args) {
         var data, filename, link;
         var csv = "";
         if (csv == null) return;
         filename = args.filename || 'chart-data.csv';
-        actorsdidwin = args.actorswon;
-        actorsdidnotwin = args.actorsnotwon;
+        men = args.men;
+        women = args.women;
         year = args.year;
-        csv += "year,numberactorswon,numberactorsdidnotwin\n";
-        csv += year + "," + actorsdidwin + "," + actorsdidnotwin;
+        csv += "year,men,women\n";
+        csv += year + "," + men + "," + women;
 
         if (!csv.match(/^data:text\/csv/i)) {
           csv = 'data:text/csv;charset=utf-8,' + csv;
@@ -241,9 +232,8 @@
         document.body.removeChild(link);
       }
 
-
       function downloadPNG() {
-        chart.options.title.text = 'New Chart Title';
+        chart.options.title.text = 'How many people';
         chart.update({
           duration: 0
         });
@@ -270,99 +260,6 @@
           document.body.removeChild(downloadLink); 
       }
       */
-
-
-      <?php
-      require 'API/vendor/autoload.php';
-      include('API/config.php');
-      include_once('API/post.php');
-
-      $post = new Post($users);
-
-      $men = $post->getMen();
-      $women = $post->getWomen();
-
-      $year = $post->getYear();
-
-
-      ?>
-
-      function downloadSVG() {
-        //let svgData= chart;
-
-        people = '<?php echo $women;
-                  echo $men; ?>';
-        svgData = '<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /> Sorry, your browser does not support inline SVG. <text x="20" y="35" class="small">'
-
-
-        //let svgData= chart.outerHTML; 
-        svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + svgData + people + "</text> </svg>";
-
-        let svgBlob = new Blob([svgData], {
-          type: "image/svg+xml;charset=utf-8"
-        });
-        let svgUrl = URL.createObjectURL(svgBlob);
-        let downloadLink = document.createElement('a');
-        downloadLink.href = svgUrl;
-        downloadLink.download = 'chart.svg';
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-      }
-
-
-      /*function downloadSVG(){
-          if (chart.options.animation !== false) {
-          console.warn('Cannot create SVG: "animation" is not set to false (see the options section)');
-          return;
-        }
-        if (chart.options.responsive !== false) {
-          console.warn('Cannot create SVG: "responsive" is not set to false (see the options section)');
-          return;
-        }
-
-        tweakLib();
-
-        // get the dimensions of our original chart
-        let chartCanvas = document.getElementById('canvas');
-        let width =  chartCanvas.offsetWidth;
-        let height = chartCanvas.offsetHeight;
-
-        // create an svg version of the chart
-        let svgContext = C2S(width, height);
-        let svgChart = new Chart(svgContext, chartSettings);
-
-        // create download link
-        let link = document.createElement('a');
-        link.href = 'data:image/svg+xml;utf8,' + encodeURIComponent(svgContext.getSerializedSvg());
-        link.download = filename;
-        link.text = linkText;
-
-        // add link to the page
-        document.body.appendChild(link);
-        link.click();
-      }
-
-      function tweakLib() {
-        C2S.prototype.getContext = function(contextId) {
-          if (contextId === '2d' || contextId === '2D') {
-            return this;
-          }
-          return null;
-        }
-        C2S.prototype.style = function() {
-          return this.__canvas.style;
-        }
-        C2S.prototype.getAttribute = function(name) {
-          return this[name];
-        }
-        C2S.prototype.addEventListener = function(type, listener, eventListenerOptions) {
-         
-        }
-      }*/
-
-
-
       function downloadWebP() {
         chart.options.title.text = 'New Chart Title';
         chart.update({
@@ -379,9 +276,7 @@
       }
     </script>
 
-
   </div>
-
 
   <script>
     var coll = document.getElementsByClassName("collapsible");

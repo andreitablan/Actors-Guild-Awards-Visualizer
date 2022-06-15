@@ -15,7 +15,7 @@
 <body>
 
   <header id="showcase">
-    <h1>Statistics3</h1>
+    <h1>Statistics2</h1>
   </header>
 
 
@@ -41,6 +41,7 @@
       Burger2.classList.toggle('active')
     })
   </script>
+
 
   <div class="sidenav">
     <a href="Home.php">Home</a>
@@ -83,7 +84,7 @@
     <br>
   </section>
 
-  <button type="button" class="collapsible">How many men and women were nominated</button>
+  <button type="button" class="collapsible">How many persons were nominated to each category</button>
   <div class="content">
     <form method="get">
       <div class="fallbackYearPicker">
@@ -134,15 +135,25 @@
 
 
     <?php
-    require 'API/vendor/autoload.php';
-    include('API/config.php');
-    include_once('API/post.php');
+    require '../vendor/autoload.php';
+    include('../Model/config.php');
+    include_once('../Model/post.php');
 
     $post = new Post($users);
 
-    $men = $post->getMen();
-    $women = $post->getWomen();
-
+    $category1 = $post->getPersonsByCategory("FEMALE ACTOR IN A LEADING ROLE");
+    $category2 = $post->getPersonsByCategory("MALE ACTOR IN A LEADING ROLE");
+    $category3 = $post->getPersonsByCategory("FEMALE ACTOR IN A SUPPORTING ROLE");
+    $category4 = $post->getPersonsByCategory("MALE ACTOR IN A SUPPORTING ROLE");
+    $category5 = $post->getPersonsByCategory("FEMALE ACTOR IN A DRAMA SERIES");
+    $category6 = $post->getPersonsByCategory("MALE ACTOR IN A DRAMA SERIES");
+    $category7 = $post->getPersonsByCategory("FEMALE ACTOR IN A COMEDY SERIES");
+    $category8 = $post->getPersonsByCategory("MALE ACTOR IN A COMEDY SERIES");
+    $category9 = $post->getPersonsByCategory("FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES");
+    $category10 = $post->getPersonsByCategory("MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES");
+    $category11 = $post->getPersonsByCategory("CAST IN A MOTION PICTURE");
+    $category12 = $post->getPersonsByCategory("ENSEMBLE IN A COMEDY SERIES");
+    $category13 = $post->getPersonsByCategory("ENSEMBLE IN A DRAMA SERIES");
     $year = $post->getYear();
 
 
@@ -153,23 +164,89 @@
     <button id="downloadPNG" class="button">Export as PNG</button>
 
     <script>
-      men = '<?php echo $men; ?>';
-      women = '<?php echo $women; ?>';
-
+      category1 = '<?php echo $category1; ?>';
+      category2 = '<?php echo $category2; ?>';
+      category3 = '<?php echo $category3; ?>';
+      category4 = '<?php echo $category4; ?>';
+      category5 = '<?php echo $category5; ?>';
+      category6 = '<?php echo $category6; ?>';
+      category7 = '<?php echo $category7; ?>';
+      category8 = '<?php echo $category8; ?>';
+      category9 = '<?php echo $category9; ?>';
+      category10 = '<?php echo $category10; ?>';
+      category11 = '<?php echo $category11; ?>';
+      category12 = '<?php echo $category12; ?>';
+      category13 = '<?php echo $category13; ?>';
       year = '<?php echo $year; ?>';
       const data = {
-        labels: ['men', 'women'],
+        labels: [
+          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+        ],
         datasets: [{
-          label: 'Difference between number of men and women',
-          data: [men, women],
-          fill: false,
-          borderColor: 'rgb(75, 192, 192)',
-          tension: 0.1
-        }]
+            label: '1 - FEMALE ACTOR IN A LEADING ROLE',
+
+
+            data: [category1, category2, category3, category4, category5, category6, category7, category8, category9, category10, category11, category12, category13],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(255, 159, 64, 0.2)',
+              'rgba(255, 205, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(201, 203, 207, 0.2)'
+            ],
+            borderColor: [
+              'rgb(255, 99, 132)',
+              'rgb(255, 159, 64)',
+              'rgb(255, 205, 86)',
+              'rgb(75, 192, 192)',
+              'rgb(54, 162, 235)',
+              'rgb(153, 102, 255)',
+              'rgb(201, 203, 207)'
+            ],
+            borderWidth: 1
+          }, {
+            label: '2 - MALE ACTOR IN A LEADING ROLE'
+          },
+          {
+            label: '3 - FEMALE ACTOR IN A SUPPORTING ROLE'
+          },
+          {
+            label: '4 - MALE ACTOR IN A SUPPORTING ROLE'
+          },
+          {
+            label: '5 - FEMALE ACTOR IN A DRAMA SERIES'
+          },
+          {
+            label: '6 - MALE ACTOR IN A DRAMA SERIES'
+          },
+          {
+            label: '7 - FEMALE ACTOR IN A COMEDY SERIES'
+          },
+          {
+            label: '8 - MALE ACTOR IN A COMEDY SERIES'
+          },
+          {
+            label: '9 - FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES'
+          },
+          {
+            label: '10 - MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES'
+          },
+          {
+            label: '11 - CAST IN A MOTION PICTURE'
+          },
+          {
+            label: '12 - ENSEMBLE IN A COMEDY SERIES'
+          },
+          {
+            label: '13 - ENSEMBLE IN A DRAMA SERIES'
+          }
+        ]
 
       };
       const config = {
-        type: 'line',
+        type: 'bar',
         data: data,
         options: {
           title: {
@@ -179,6 +256,13 @@
           scales: {
             y: {
               beginAtZero: true
+            }
+          },
+          plugins: {
+            legend: {
+              display: true,
+              position: 'right',
+              color: 'red'
             }
           }
         },
@@ -193,8 +277,19 @@
         downloadCSV({
           filename: "chart-data.csv",
           year,
-          men,
-          women
+          category1,
+          category2,
+          category3,
+          category4,
+          category5,
+          category6,
+          category7,
+          category8,
+          category9,
+          category10,
+          category11,
+          category12,
+          category13
         })
       });
       document.getElementById("downloadPNG").addEventListener("click", function() {
@@ -207,17 +302,14 @@
         downloadWebP();
       });
 
-
       function downloadCSV(args) {
         var data, filename, link;
-        var csv = "";
+        var csv = "year,FEMALE ACTOR IN A LEADING ROLE,MALE ACTOR IN A LEADING ROLE,FEMALE ACTOR IN A SUPPORTING ROLE,MALE ACTOR IN A SUPPORTING ROLE,FEMALE ACTOR IN A DRAMA SERIES,MALE ACTOR IN A DRAMA SERIES,FEMALE ACTOR IN A COMEDY SERIES,MALE ACTOR IN A COMEDY SERIES,FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES,MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES,CAST IN A MOTION PICTURE,ENSEMBLE IN A COMEDY SERIES,ENSEMBLE IN A DRAMA SERIES\n";
+        csv += year + "," + category1 + "," + category2 + "," + category3 + "," + category4 + "," + category5 + "," + category6 + "," + category7 + "," + category8 + "," + category9 + "," + category10 + "," + category11 + "," + category12 + "," + category13;
+
         if (csv == null) return;
-        filename = args.filename || 'chart-data.csv';
-        men = args.men;
-        women = args.women;
-        year = args.year;
-        csv += "year,men,women\n";
-        csv += year + "," + men + "," + women;
+
+        filename = 'chart-data.csv';
 
         if (!csv.match(/^data:text\/csv/i)) {
           csv = 'data:text/csv;charset=utf-8,' + csv;

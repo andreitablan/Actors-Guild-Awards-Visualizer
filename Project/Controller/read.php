@@ -3,11 +3,11 @@
 //header('Acces-Control-Allow-Origin: *');
 //header('Content-Type: application/json');
 
-require 'vendor/autoload.php';
+require '../vendor/autoload.php';
 
-include('config.php');
+include('../Model/config.php');
 
-include_once('post.php');
+include_once('../Model/spost.php');
 
 $show="";
 $post= new Post($users);
