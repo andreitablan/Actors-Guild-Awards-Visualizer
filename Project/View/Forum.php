@@ -42,7 +42,6 @@
     })
   </script>
 
-
   <div class="sidenav">
     <a href="Home.php">Home</a>
     <a href="Winners.php">Winners</a>

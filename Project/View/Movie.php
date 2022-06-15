@@ -80,7 +80,6 @@
 
 
   <h2><b>&emsp; Welcome to the movie details page</b></h2>
-  <p style="text-align: center;">This is a web page designed to show informations about a movie/TV show. </p>
   <section id="section-a">
     <p>
     <div class="search-container">
@@ -165,7 +164,13 @@
           myAverage = data.results[0].vote_average;
           myOverview = data.results[0].overview;
           myReleaseDate = data.results[0].release_date;
+          if(myTitle==null)myTitle="No data found."
+          if(myAverage==null)myAverage="No data found."
+          if(myOverview==null)myOverview="No data found."
+          if(myReleaseDate==null)myReleaseDate="No data found."
+
           const movieEl = document.createElement('div');
+          
           movieEl.classList.add('movie');
           movieEl.innerHTML = `
              <img src="${myPhoto}" alt="Image">

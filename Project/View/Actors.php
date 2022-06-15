@@ -84,7 +84,6 @@
         <p>
 
         <h2><b>&emsp; Welcome ot the actor page</b></h2>
-        <p style="text-align: center;">This is a web page designed to show informations about an actor. </p>
 
         <div class="search-container">
             </form>
@@ -178,11 +177,20 @@
                     birthday = data.birthday;
                     deathday = data.deathday;
                     gender = data.gender;
+                    if(gender==1)gender="female";
+                    if(gender==2)gender="male";
                     known_for_department = data.known_for_department;
                     name = data.name;
                     place_of_birth = data.place_of_birth;
                     popularity = data.popularity;
-
+                    if(birthday==null)birthday="No data found."
+                    if(biography==null)biography="No data found."
+                    if(deathday==null)deathday="No data found."
+                    if(gender==null)gender="No data found."
+                    if(known_for_department==null)known_for_department="No data found."
+                    if(name==null)name="No data found."
+                    if(place_of_birth==null)place_of_birth="No data found."
+                    if(popularity==null)popularity="No data found."
 
                     const actorEl = document.createElement('div');
                     actorEl.classList.add('actor');
@@ -196,7 +204,7 @@
             <div class="deathday">Deathday: ${deathday}</div>
             <div class="gender">Gender: ${gender}</div>
             <div class="known_for_department">Departament: ${known_for_department}</div>
-            <div class="name">Name:${name}</div>
+            <div class="name">Name: ${name}</div>
             <div class="place_of_birth">Place of Birth: ${place_of_birth}</div>
             <div class="popularity">Popularity: ${popularity}</div>
              `

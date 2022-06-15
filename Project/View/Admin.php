@@ -94,7 +94,7 @@
             var data = new FormData(document.getElementById("LoginForm"));
 
             // (B) AJAX REQUEST
-            fetch("dummy.php", {
+            fetch("users.php", {
                     method: "POST",
                     body: data
                 })

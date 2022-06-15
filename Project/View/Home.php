@@ -91,7 +91,7 @@
     <p style="text-align: center;">This is a web page designed for flexible viewing of Actor Nomination Guild (SAG) Awards for recent years. </p>
 
     <div class="search-container">
-      <form action="https://www.google.com/search" method="get" class="search-bar">
+      <form action="https://www.google.com/search?q=+Screen+Actors+Guild+Awards" method="get" class="search-bar">
         <input type="text" placeholder="Search for an actor..." name="q">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
@@ -105,13 +105,11 @@
     <p class="marquee">
       <span>
         28 FEBRUARY 2022:
-        <a href="#" class="new-winners"> FEMALE ACTOR IN A LEADING ROLE: Viola Davis in Ma Rainey's Black Bottom</a>
+        <a href="https://www.youtube.com/watch?v=ord7gP151vk" class="new-winners"> FEMALE ACTOR IN A LEADING ROLE: Viola Davis in Ma Rainey's Black Bottom</a>
         28 FEBRUARY 2022:
-        <a href="#" class="new-winners"> MALE ACTOR IN A LEADING ROLE: Chadwick Boseman in Ma Rainey's Black Bottom</a>
+        <a href="https://www.youtube.com/watch?v=KQ0gFidlro8" class="new-winners"> FEMALE ACTOR IN A SUPPORTING ROLE: Yuh-Jong Youn in Minari </a>
         28 FEBRUARY 2022:
-        <a href="#" class="new-winners"> FEMALE ACTOR IN A SUPPORTING ROLE: Yuh-Jong Youn in Minari </a>
-        28 FEBRUARY 2022:
-        <a href="#" class="new-winners"> MALE ACTOR IN A SUPPORTING ROLE: Daniel Kaluuya in Judas and the Black Messiah </a>
+        <a href="https://www.youtube.com/watch?v=sSjtGqRXQ9Y" class="new-winners"> MALE ACTOR IN A SUPPORTING ROLE: Daniel Kaluuya in Judas and the Black Messiah </a>
       </span>
     </p>
   </div>
