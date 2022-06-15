@@ -245,7 +245,7 @@ class Post{
 
      echo '<a href='; echo $mynewslink; echo '>Visit News</a>';
      echo '<br>';
-     echo '<img src=';  echo $myimagelink;  echo ' style="width:500px;height:600px;">';
+     echo '<img src=';  echo $myimagelink;  echo ' style="width:300px;height:400px;">';
 
      //echo '<a href='; echo $mynewslink; echo '>';
      //echo '<img src=';  echo $myimagelink;  echo '>';
