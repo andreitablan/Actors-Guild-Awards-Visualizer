@@ -32,3 +32,16 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 }
 
+function validate(){
+  var username=genrate.getElementById("username").nodeValue;
+  var password=genrate.getElementById("password").nodeValue;
+  
+  if(username=="andan"&&password=="Andan1_"){
+    alert("login succesfully");
+    return true;
+  }
+  else{
+    alert("login failed");
+    return false;
+  }
+}

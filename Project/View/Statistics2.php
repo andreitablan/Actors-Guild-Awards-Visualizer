@@ -31,6 +31,8 @@
     <a href="Forum.php">Forum</a>
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
+    <a href="Admin.php">Admin</a>
+
   </div>
 
   <script>
@@ -49,6 +51,8 @@
     <a href="Forum.php">Forum</a>
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
+    <a href="Admin.php">Admin</a>
+
     <button class="dropdown-btn">Statistics
       <i class="fa fa-caret-down"></i>
     </button>

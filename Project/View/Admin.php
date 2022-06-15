@@ -8,13 +8,14 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Actors Guild Awards Visualizer</title>
+  <script src="javascript.js"></script>
 
 </head>
 
 <body>
 
   <header id="showcase">
-    <h1>Login page</h1>
+    <h1>Admin page</h1>
   </header>
 
   <a href="#" class="toggle-button">
@@ -29,6 +30,8 @@
     <a href="Forum.php">Forum</a>
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
+    <a href="Admin.php">Admin</a>
+
   </div>
 
   <script>
@@ -40,12 +43,14 @@
     })
   </script>
 
+
   <div class="sidenav">
     <a href="Home.php">Home</a>
     <a href="Winners.php">Winners</a>
     <a href="Forum.php">Forum</a>
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
+    <a href="Admin.php">Admin</a>
     <button class="dropdown-btn">Statistics
       <i class="fa fa-caret-down"></i>
     </button>
@@ -56,6 +61,13 @@
     </div>
   </div>
 
+  <form class="box" action="AdminFunctions.php" method="POST">
+  <h2>Login</h2>
+  <input type="text" name="" placeholder="Enter Admin Username" id="username">
+  <input type="password" name="" placeholder="Enter Password" id="password">
+  <input type="submit" name="" value="Login" onclick="validate()">
+
+  </form>
 
   <script>
     var dropdown = document.getElementsByClassName("dropdown-btn");
