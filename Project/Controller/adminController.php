@@ -16,14 +16,11 @@ $full_name=$_GET["actorname"];
 $show=$_GET["showname"];
 $won=$_GET["won"];
 
-
 if($command=="insert"){
 $admin->insert($year,$category,$full_name,$show,$won);
-echo "<p>&emsp;Inserted:" . $year . " " . $category . " " . $full_name . " " . $show . " " . $won;
 }
 else if($command=="delete"){
 $admin->delete($year,$category,$full_name,$show,$won);
-echo "<p>&emsp;Deleted:" . $year . " " . $category . " " . $full_name . " " . $show . " " . $won;
 }
 
 ?>
