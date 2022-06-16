@@ -14,7 +14,8 @@
 <body>
 
   <header id="showcase">
-    <h1>Forum page</h1>
+  <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Forum page</h2>
   </header>
 
   <a href="#" class="toggle-button">
@@ -30,6 +31,9 @@
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
     <a href="Admin.php">Admin</a>
+    <a href="Statistics1.php">Statistic 1</a>
+    <a href="Statistics2.php">Statistic 2</a>
+    <a href="Statistics3.php">Statistic 3</a>
 
   </div>
 
@@ -61,8 +65,8 @@
   </div>
 
   <?php
-    include("../Controller/showComments.php");
-    ?>
+  include("../Controller/showComments.php");
+  ?>
 
 
   <form class="box2" id="WriteComment" action='#' method="GET">
@@ -74,7 +78,7 @@
 
 
   <div class="content">
-  <?php
+    <?php
     include("../Controller/forumController.php");
     ?>
   </div>

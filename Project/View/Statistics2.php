@@ -15,7 +15,8 @@
 <body>
 
   <header id="showcase">
-    <h1>Statistics2</h1>
+  <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Statistic 2</h2>
   </header>
 
 
@@ -32,6 +33,9 @@
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
     <a href="Admin.php">Admin</a>
+    <a href="Statistics1.php">Statistic 1</a>
+    <a href="Statistics2.php">Statistic 2</a>
+    <a href="Statistics3.php">Statistic 3</a>
 
   </div>
 
@@ -320,6 +324,67 @@
         chart.update({
           duration: 0
         });
+      }
+
+      <?php
+      require '../vendor/autoload.php';
+      include('../Model/config.php');
+      include_once('../Model/post.php');
+
+      $post = new Post($users);
+
+      $category1 = $post->getPersonsByCategory("FEMALE ACTOR IN A LEADING ROLE")+20;
+      $category2 = $post->getPersonsByCategory("MALE ACTOR IN A LEADING ROLE")+20;
+      $category3 = $post->getPersonsByCategory("FEMALE ACTOR IN A SUPPORTING ROLE")+20;
+      $category4 = $post->getPersonsByCategory("MALE ACTOR IN A SUPPORTING ROLE")+20;
+      $category5 = $post->getPersonsByCategory("FEMALE ACTOR IN A DRAMA SERIES")+20;
+      $category6 = $post->getPersonsByCategory("MALE ACTOR IN A DRAMA SERIES")+20;
+      $category7 = $post->getPersonsByCategory("FEMALE ACTOR IN A COMEDY SERIES")+20;
+      $category8 = $post->getPersonsByCategory("MALE ACTOR IN A COMEDY SERIES")+20;
+      $category9 = $post->getPersonsByCategory("FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES")+20;
+      $category10 = $post->getPersonsByCategory("MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES")+20;
+      $category11 = $post->getPersonsByCategory("CAST IN A MOTION PICTURE")+20;
+      $category12 = $post->getPersonsByCategory("ENSEMBLE IN A COMEDY SERIES")+20;
+      $category13 = $post->getPersonsByCategory("ENSEMBLE IN A DRAMA SERIES")+20;
+      $year = $post->getYear();
+  
+      ?>
+
+      function downloadSVG() {
+        //let svgData= chart;
+
+        people = `
+        <line x1="100" y1="200" x2="1400" y2="200" style="stroke:black;stroke-width:2" />
+        <line x1="100" y1="200" x2="100" y2="700" style="stroke:black;stroke-width:2" />
+        <line x1="100" y1="<?php echo $category1?>0" x2="200" y2="<?php echo $category2?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="200" y1="<?php echo $category2?>0" x2="300" y2="<?php echo $category3?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="300" y1="<?php echo $category3?>0" x2="400" y2="<?php echo $category4?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="400" y1="<?php echo $category4?>0" x2="500" y2="<?php echo $category5?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="500" y1="<?php echo $category5?>0" x2="600" y2="<?php echo $category6?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="600" y1="<?php echo $category6?>0" x2="700" y2="<?php echo $category7?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="700" y1="<?php echo $category7?>0" x2="800" y2="<?php echo $category8?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="800" y1="<?php echo $category8?>0" x2="900" y2="<?php echo $category9?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="900" y1="<?php echo $category9?>0" x2="1000" y2="<?php echo $category10?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="1000" y1="<?php echo $category10?>0" x2="1100" y2="<?php echo $category11?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="1100" y1="<?php echo $category11?>0" x2="1200" y2="<?php echo $category12?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+        <line x1="1200" y1="<?php echo $category12?>0" x2="1300" y2="<?php echo $category13?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
+
+        `;
+
+
+        //let svgData= chart.outerHTML; 
+        svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + people + "</svg>";
+
+        let svgBlob = new Blob([svgData], {
+          type: "image/svg+xml;charset=utf-8"
+        });
+        let svgUrl = URL.createObjectURL(svgBlob);
+        let downloadLink = document.createElement('a');
+        downloadLink.href = svgUrl;
+        downloadLink.download = 'chart.svg';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
       }
       /*
       function downloadSVG(){

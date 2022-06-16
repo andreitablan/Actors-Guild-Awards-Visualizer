@@ -15,7 +15,8 @@
 <body>
 
   <header id="showcase">
-    <h1>Statistics1</h1>
+  <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Statistic 1</h2>
   </header>
 
 
@@ -32,6 +33,9 @@
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
     <a href="Admin.php">Admin</a>
+    <a href="Statistics1.php">Statistic 1</a>
+    <a href="Statistics2.php">Statistic 2</a>
+    <a href="Statistics3.php">Statistic 3</a>
 
   </div>
 
@@ -51,6 +55,7 @@
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
     <a href="Admin.php">Admin</a>
+    
 
     <button class="dropdown-btn">Statistics
       <i class="fa fa-caret-down"></i>
@@ -281,24 +286,32 @@
 
       $post = new Post($users);
 
-      $men = $post->getMen();
-      $women = $post->getWomen();
+      $arraytosend=$post->howManyActorsWon();
+      $won=$arraytosend[0];
+      $notwon=$arraytosend[1];
 
       $year = $post->getYear();
-
 
       ?>
 
       function downloadSVG() {
         //let svgData= chart;
 
-        people = '<?php echo $women;
-                  echo $men; ?>';
-        svgData = '<circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" /> Sorry, your browser does not support inline SVG. <text x="20" y="35" class="small">'
+        people = `
+        <circle r="400" cx="450" cy="400" fill="blue" />
+        <circle r="200" cx="450" cy="400" fill="blue"
+            stroke="pink"
+            stroke-width="400"
+            stroke-dasharray="calc((<?php echo $won?>/<?php echo $notwon?>*100)*1256.8/100) 1256.8"/>
+                        
+        <text x="10" y="110" style="fill:red;">Year: <?php echo $year?></text>
+        <text x="10" y="135" style="fill:pink;">Won: <?php echo $won?></text>
+        <text x="10" y="160" style="fill:blue;">Did not win: <?php echo $notwon?></text>
+        `;
 
 
         //let svgData= chart.outerHTML; 
-        svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + svgData + people + "</text> </svg>";
+        svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + people + "</svg>";
 
         let svgBlob = new Blob([svgData], {
           type: "image/svg+xml;charset=utf-8"

@@ -7,20 +7,20 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+  <title style="font-family: Garamond, serif;font-size: 12px;color: rgba(0, 0, 0, 0.5);">A</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="javascript.js"></script>
-  <title>Actors Guild Awards Visualizerr</title>
 </head>
 
 <body>
 
   <header id="showcase">
-    <h1>Home</h1>
-  </header>
+    <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Home</h2>
 
+  </header>
 
 
   <a href="#" class="toggle-button">
@@ -36,7 +36,9 @@
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
     <a href="Admin.php">Admin</a>
-
+    <a href="Statistics1.php">Statistic 1</a>
+    <a href="Statistics2.php">Statistic 2</a>
+    <a href="Statistics3.php">Statistic 3</a>
 
   </div>
 
@@ -87,7 +89,7 @@
   <section id="section-a">
     <p>
 
-    <h2><b>&emsp; Welcome to Actor Guild Award Vizualizer</b></h2>
+    <h2 style="text-align: center;"><b>&emsp; Welcome to Actor Guild Award Vizualizer</b></h2>
     <p style="text-align: center;">This is a web page designed for flexible viewing of Actor Nomination Guild (SAG) Awards for recent years. </p>
 
     <div class="search-container">
@@ -104,12 +106,30 @@
 
     <p class="marquee">
       <span>
-        28 FEBRUARY 2022:
-        <a href="https://www.youtube.com/watch?v=ord7gP151vk" class="new-winners"> FEMALE ACTOR IN A LEADING ROLE: Viola Davis in Ma Rainey's Black Bottom</a>
-        28 FEBRUARY 2022:
-        <a href="https://www.youtube.com/watch?v=KQ0gFidlro8" class="new-winners"> FEMALE ACTOR IN A SUPPORTING ROLE: Yuh-Jong Youn in Minari </a>
-        28 FEBRUARY 2022:
-        <a href="https://www.youtube.com/watch?v=sSjtGqRXQ9Y" class="new-winners"> MALE ACTOR IN A SUPPORTING ROLE: Daniel Kaluuya in Judas and the Black Messiah </a>
+        <a href="https://youtu.be/eMMLRnXPPJk" class="new-winners"> FEMALE ACTOR IN A LEADING ROLE: Jessica Chastain in The Eyes Of Tammy Faye</a>
+
+        <a href="https://www.youtube.com/watch?v=BKP_0z52ZAw&t=12s" class="new-winners"> MALE ACTOR IN A LEADING ROLE: Will Smith in King Richard </a>
+
+        <a href="https://youtu.be/A5GJLwWiYSg" class="new-winners"> FEMALE ACTOR IN A SUPPORTING ROLE: Ariana Debose in West Side Story </a>
+
+        <a href="https://youtu.be/0pmfrE1YL4I" class="new-winners"> MALE ACTOR IN A SUPPORTING ROLE: Troy Kotsur in Coda </a>
+
+        <a href="https://youtu.be/oqxAJKy0ii4" class="new-winners"> FEMALE ACTOR IN A DRAMA SERIES: Jung Ho-Yeon in Squid Game </a>
+
+        <a href="https://youtu.be/oqxAJKy0ii4" class="new-winners"> MALE ACTOR IN A DRAMA SERIES: Lee Jung-Jae in Squid Game </a>
+
+        <a href="https://youtu.be/QpE4893PxqE" class="new-winners"> FEMALE ACTOR IN A COMEDY SERIES: Jean Smart in Hacks</a>
+
+        <a href="https://youtu.be/3u7EIiohs6U" class="new-winners"> MALE ACTOR IN A COMEDY SERIES: Jason Sudeikis in Ted Lasso </a>
+
+        <a href="https://youtu.be/MYcQAy3e70M" class="new-winners"> FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES: Kate Winslet in Mare of Easttown </a>
+
+        <a href="https://youtu.be/EzrLrUG2QVk" class="new-winners"> MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES: Michael Keaton in Dopesick </a>
+
+        <a href="https://youtu.be/3u7EIiohs6U" class="new-winners"> ENSEMBLE IN A COMEDY SERIES: Ted Lasso </a>
+
+        <a href="https://youtu.be/kevqiiYNFrc" class="new-winners"> ENSEMBLE IN A DRAMA SERIES: Succession </a>
+
       </span>
     </p>
   </div>

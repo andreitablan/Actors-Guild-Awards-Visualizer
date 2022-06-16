@@ -15,7 +15,8 @@
 <body>
 
     <header id="showcase">
-        <h1>Admin page</h1>
+    <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Admin page</h2>
     </header>
 
     <a href="#" class="toggle-button">
@@ -31,6 +32,9 @@
         <a href="Movie.php">Movie Details</a>
         <a href="Actors.php">Actors</a>
         <a href="Admin.php">Admin</a>
+        <a href="Statistics1.php">Statistic 1</a>
+        <a href="Statistics2.php">Statistic 2</a>
+        <a href="Statistics3.php">Statistic 3</a>
 
     </div>
 

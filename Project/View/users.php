@@ -5,8 +5,10 @@ $user = [
 ];
 
 $pass = $_POST["username"] == $user["username"];
-if ($pass) { $pass = $_POST["password"] == $user["password"]; }
- 
+if ($pass) {
+  $pass = $_POST["password"] == $user["password"];
+}
+
 if ($pass) {
   session_start();
   $_SESSION["user"] = [
@@ -14,6 +16,5 @@ if ($pass) {
     "password" => $user["password"]
   ];
 }
- 
+
 echo $pass ? "OK" : "Invalid user or password";
- 

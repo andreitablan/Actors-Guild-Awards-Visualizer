@@ -15,7 +15,8 @@
 <body>
 
   <header id="showcase">
-    <h1>Statistics3</h1>
+  <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Statistic 3</h2>  
   </header>
 
 
@@ -32,7 +33,9 @@
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
     <a href="Admin.php">Admin</a>
-
+    <a href="Statistics1.php">Statistic 1</a>
+    <a href="Statistics2.php">Statistic 2</a>
+    <a href="Statistics3.php">Statistic 3</a>
   </div>
 
   <script>
@@ -51,6 +54,7 @@
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
     <a href="Admin.php">Admin</a>
+ 
 
     <button class="dropdown-btn">Statistics
       <i class="fa fa-caret-down"></i>
@@ -274,6 +278,55 @@
           duration: 0
         });
       }
+
+       
+      <?php
+      require '../vendor/autoload.php';
+      include('../Model/config.php');
+      include_once('../Model/post.php');
+
+      $post = new Post($users);
+
+      $men=$post->getMen();
+      $women=$post->getWomen();
+      $people=$men+$women;
+      $year = $post->getYear();
+
+      $menHeight=$men*10;
+      $womenHeight=$women*10;
+      ?>
+
+      function downloadSVG() {
+        //let svgData= chart;
+
+        people = `
+
+        <rect x="50" y="120" width="100" height="<?php echo $menHeight?>" style="fill:pink;stroke-width:3;stroke:rgb(0,0,0)" />
+        <rect x="200" y="120" width="100" height="<?php echo $womenHeight?>" style="fill:orange;stroke-width:3;stroke:rgb(0,0,0)" />
+                        
+        <text x="10" y="50" style="fill:red;">Year: <?php echo $year?></text>
+        <text x="10" y="75" style="fill:pink;">Men: <?php echo $men?></text>
+        <text x="10" y="100" style="fill:blue;">Women: <?php echo $women?></text>
+        `;
+
+
+        //let svgData= chart.outerHTML; 
+        svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + people + "</svg>";
+
+        let svgBlob = new Blob([svgData], {
+          type: "image/svg+xml;charset=utf-8"
+        });
+        let svgUrl = URL.createObjectURL(svgBlob);
+        let downloadLink = document.createElement('a');
+        downloadLink.href = svgUrl;
+        downloadLink.download = 'chart.svg';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+        document.body.removeChild(downloadLink);
+      }
+
+
+
       /*
       function downloadSVG(){
       let svgData: string = chart.svgObject.outerHTML; 

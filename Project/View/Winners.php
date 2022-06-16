@@ -15,7 +15,8 @@
 <body>
 
   <header id="showcase">
-    <h1>Winners</h1>
+  <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Winners</h2>
   </header>
 
 
@@ -32,6 +33,9 @@
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
     <a href="Admin.php">Admin</a>
+    <a href="Statistics1.php">Statistic 1</a>
+    <a href="Statistics2.php">Statistic 2</a>
+    <a href="Statistics3.php">Statistic 3</a>
 
   </div>
 
@@ -140,13 +144,12 @@
   </form>
   <br>
 
-
   <?php
   include_once('../Model/post.php');
   include("../Model/config.php");
   $post = new Post($users);
   $post->showNews(); ?>
-
+  
   <section id="section-b">
     <h3>&emsp;Choose a category:</h3>
     <br>

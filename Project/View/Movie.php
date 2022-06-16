@@ -14,7 +14,8 @@
 <body>
 
   <header id="showcase">
-    <h1>Movies page</h1>
+  <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Movie page</h2>
   </header>
 
   <a href="#" class="toggle-button">
@@ -30,6 +31,9 @@
     <a href="Movie.php">Movie Details</a>
     <a href="Actors.php">Actors</a>
     <a href="Admin.php">Admin</a>
+    <a href="Statistics1.php">Statistic 1</a>
+    <a href="Statistics2.php">Statistic 2</a>
+    <a href="Statistics3.php">Statistic 3</a>
 
   </div>
 
@@ -79,7 +83,7 @@
   </script>
 
 
-  <h2><b>&emsp; Welcome to the movie details page</b></h2>
+  <h2 style="text-align: center;"><b>&emsp; Welcome to the movie details page</b></h2>
   <section id="section-a">
     <p>
     <div class="search-container">
@@ -164,13 +168,13 @@
           myAverage = data.results[0].vote_average;
           myOverview = data.results[0].overview;
           myReleaseDate = data.results[0].release_date;
-          if(myTitle==null)myTitle="No data found."
-          if(myAverage==null)myAverage="No data found."
-          if(myOverview==null)myOverview="No data found."
-          if(myReleaseDate==null)myReleaseDate="No data found."
+          if (myTitle == null) myTitle = "No data found."
+          if (myAverage == null) myAverage = "No data found."
+          if (myOverview == null) myOverview = "No data found."
+          if (myReleaseDate == null) myReleaseDate = "No data found."
 
           const movieEl = document.createElement('div');
-          
+
           movieEl.classList.add('movie');
           movieEl.innerHTML = `
              <img src="${myPhoto}" alt="Image">

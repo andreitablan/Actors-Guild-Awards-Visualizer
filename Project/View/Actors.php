@@ -14,8 +14,8 @@
 <body>
 
     <header id="showcase">
-        <h1>Actors page</h1>
-    </header>
+    <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Actors page</h2>    </header>
 
     <a href="#" class="toggle-button">
         <span class="bar"></span>
@@ -30,6 +30,9 @@
         <a href="Movie.php">Movie Details</a>
         <a href="Actors.php">Actors</a>
         <a href="Admin.php">Admin</a>
+        <a href="Statistics1.php">Statistic 1</a>
+        <a href="Statistics2.php">Statistic 2</a>
+        <a href="Statistics3.php">Statistic 3</a>
 
 
     </div>
@@ -80,13 +83,12 @@
         }
     </script>
 
-<h2><b>&emsp; Welcome to the actor page</b></h2>
+    <h2 style="text-align: center;"><b>&emsp; Welcome to the actor page</b></h2>
 
     <section id="section-a">
         <p>
 
         <div class="search-container">
-            </form>
             <form id="form" method="get" class="search-bar">
                 <input type="text" placeholder="Search for an actor..." name="search" id="search" class="search">
                 <button type="submit"><i class="fa fa-search"></i></button>
@@ -177,20 +179,20 @@
                     birthday = data.birthday;
                     deathday = data.deathday;
                     gender = data.gender;
-                    if(gender==1)gender="female";
-                    if(gender==2)gender="male";
+                    if (gender == 1) gender = "female";
+                    if (gender == 2) gender = "male";
                     known_for_department = data.known_for_department;
                     name = data.name;
                     place_of_birth = data.place_of_birth;
                     popularity = data.popularity;
-                    if(birthday==null)birthday="No data found."
-                    if(biography==null)biography="No data found."
-                    if(deathday==null)deathday="No data found."
-                    if(gender==null)gender="No data found."
-                    if(known_for_department==null)known_for_department="No data found."
-                    if(name==null)name="No data found."
-                    if(place_of_birth==null)place_of_birth="No data found."
-                    if(popularity==null)popularity="No data found."
+                    if (birthday == null) birthday = "No data found."
+                    if (biography == null) biography = "No data found."
+                    if (deathday == null) deathday = "No data found."
+                    if (gender == null) gender = "No data found."
+                    if (known_for_department == null) known_for_department = "No data found."
+                    if (name == null) name = "No data found."
+                    if (place_of_birth == null) place_of_birth = "No data found."
+                    if (popularity == null) popularity = "No data found."
 
                     const actorEl = document.createElement('div');
                     actorEl.classList.add('actor');
@@ -208,7 +210,7 @@
             <div class="place_of_birth">Place of Birth: ${place_of_birth}</div>
             <div class="popularity">Popularity: ${popularity}</div>
              `
-                  main.appendChild(actorEl);
+                    main.appendChild(actorEl);
                 })
         }
 
