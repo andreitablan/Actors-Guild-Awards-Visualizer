@@ -613,12 +613,12 @@ body{
   background:rgba(255, 0, 0, 0.938);
   text-align:center;
 }
-.box.h1{
+.box1.h1{
   color: white;
   text-transform: uppercase;
   font-weight:700px;
 }
-.box input[type="text"],.box input[type="password"]
+.box1 input[type="text"],.box1 input[type="password"]
 {
   border:0;
   background:#ccc;
@@ -633,12 +633,12 @@ body{
   border-radius: 24px;
   transition: 0.25px;
 }
-.box input[type="text"]:focus,.box input[type="password"]:focus
+.box1 input[type="text"]:focus,.box1 input[type="password"]:focus
 {
   width:270 px;
   border-color: rgba(255, 2, 2, 0.632);
 }
-.box input[type="submit"]{
+.box1 input[type="submit"]{
   border:0;
   background:#ccc;
   display: block;
@@ -652,6 +652,149 @@ body{
   transition: 0.25px;
   cursor:pointer;
 }
-.box input[type="submit"]:hover{
+.box1 input[type="submit"]:hover{
   background: rgb(255, 163, 34);
+}
+---------------------------------------------
+
+body{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+}
+.box2{
+  width:600px;
+  padding:30px;
+  position:absolute;
+  top:80%;
+  left:45%;
+  transform: translate(-50%,-50%);
+  background:rgba(244, 0, 0, 0.938);
+  text-align:center;
+}
+.box2.h2{
+  color: white;
+  text-transform: uppercase;
+  font-weight:700px;
+}
+.box2 input[type="text"],.box2 input[type="username"]
+{
+  border:0;
+  background:#ccc;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 3px solid rgba(255, 0, 0, 0);
+  padding: 14px 10px;
+  width: 520px;
+  outline: none;
+  color:rgb(0, 0, 0);
+  border-radius: 24px;
+  transition: 0.25px;
+}
+.box2 input[type="text"]:focus,.box2 input[type="username"]:focus
+{
+  width:270 px;
+  border-color: rgba(255, 2, 2, 0.632);
+}
+.box2 input[type="submit"]{
+  border:0;
+  background:#ccc;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 3px solid rgba(255, 2, 2, 0.632);
+  padding: 14px 35px;
+  outline: none;
+  color:rgb(253, 1, 1);
+  border-radius: 24px;
+  transition: 0.25px;
+  cursor:pointer;
+}
+.box2 input[type="submit"]:hover{
+  background: rgb(255, 163, 34);
+}
+------------------------------------
+body{
+  margin:1px;
+  padding:8px;
+  font-family: sans-serif;
+}
+.fallbackYearPicker{
+  width:170px;
+  padding:8px;
+  position:relative;
+  top:0.89cm;
+  left:3cm;
+  transform: translate(-50%,-50%);
+  background:rgba(240, 0, 0, 0.938);
+  text-align:center;
+}
+.fallbackYearPicker.h2{
+  color: white;
+  text-transform: uppercase;
+  font-weight:700px;
+}
+.fallbackYearPicker input[type="text"],.fallbackYearPicker input[type="year"]
+{
+  border:0;
+  background:#ccc;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 3px solid rgba(255, 0, 0, 0);
+  padding: 14px 10px;
+  width: 520px;
+  outline: none;
+  color:rgb(0, 0, 0);
+  border-radius: 24px;
+  transition: 0.25px;
+}
+.fallbackYearPicker input[type="text"]:focus,.fallbackYearPicker input[type="year"]:focus
+{
+  width:270 px;
+  border-color: rgba(255, 2, 2, 0.632);
+}
+---------------------------------
+body{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+}
+.canvas{
+  width:170px;
+  padding:8px;
+  position:relative;
+  top:5.3cm;
+  left:5cm;
+  transform: translate(-50%,-50%);
+  background:transparent;
+}
+body{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+}
+.canvas2{
+  width:170px;
+  padding:8px;
+  position:relative;
+  top:8cm;
+  left:8cm;
+  transform: translate(-50%,-50%);
+  background:transparent;
+}
+body{
+  margin:0;
+  padding:0;
+  font-family: sans-serif;
+}
+.canvas3{
+  width:170px;
+  padding:8px;
+  position:relative;
+  top:6cm;
+  left:8cm;
+  transform: translate(-50%,-50%);
+  background:transparent;
 }

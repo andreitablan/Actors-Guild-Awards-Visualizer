@@ -89,7 +89,7 @@
 
   <button type="button" class="collapsible">How many actors won</button>
   <div class="content">
-    <form method="get">
+    <form class="choseform" method="get">
       <div class="fallbackYearPicker">
         <div>
           <span>
@@ -129,11 +129,9 @@
         </div>
       </div>
     </form>
-    <?php
-
-    ?>
-    <div style="width: 500px;">
-      <canvas id="chart" width="400" height="400"></canvas>
+    
+    <div>
+      <canvas class="canvas" id="chart" width="400" height="400"></canvas>
     </div>
 
     <?php

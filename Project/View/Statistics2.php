@@ -90,7 +90,7 @@
 
   <button type="button" class="collapsible">How many persons were nominated to each category</button>
   <div class="content">
-    <form method="get">
+    <form class="choseform" method="get">
       <div class="fallbackYearPicker">
         <div>
           <span>
@@ -134,7 +134,7 @@
 
     ?>
     <div style="width: 600px;">
-      <canvas id="chart" width="400" height="400"></canvas>
+      <canvas class="canvas2"  id="chart" width="400" height="400"></canvas>
     </div>
 
 

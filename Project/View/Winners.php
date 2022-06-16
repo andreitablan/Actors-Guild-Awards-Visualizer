@@ -98,7 +98,7 @@
   </script>
 
 
-  <form method="get">
+  <form class="choseform" method="get">
     <div class="fallbackYearPicker">
       <div>
         <span>
