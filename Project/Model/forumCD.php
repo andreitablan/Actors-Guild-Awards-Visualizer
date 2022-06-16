@@ -16,19 +16,24 @@ class Comment
             'username' =>  $username,
             'comment' => $comment
         ));
+        header("Location: Forum.php");
     }
     public function getComments()
     {
-        $peopleComments = $this->comments->find( ['username' =>array('$ne' => null), 'comment' =>array('$ne' => null)]);
+        $peopleComments = $this->comments->find();
         
         $array = iterator_to_array($peopleComments);
 
         foreach ($array as $value) {
-             $username= $value["show"];
+             $username= $value["username"];
              $comment= $value["comment"];
+             echo $username;
+             echo $comment;
         }
-        echo '<script>alert("Message")</script>';
+        /*echo '<script>alert("Message")</script>';
 
-        return $array;
+        return $array;*/
     }
 }
+
+?>

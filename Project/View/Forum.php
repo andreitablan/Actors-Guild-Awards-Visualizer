@@ -60,6 +60,11 @@
     </div>
   </div>
 
+  <?php
+    include("../Controller/showComments.php");
+    ?>
+
+
   <form class="box2" id="WriteComment" action='#' method="GET">
     <h2>Write a comment</h2>
     <input type="text" name="username" placeholder="Enter an username" id="username">
@@ -67,28 +72,14 @@
     <input type="submit" name="" value="Send" onclick=' this.form.submit();'>
   </form>
 
+
   <div class="content">
-    <?php
-    include("../Controller/formController.php");
+  <?php
+    include("../Controller/forumController.php");
     ?>
-
-<div>
-    <?php
-    require '../vendor/autoload.php';
-    include('../Model/config.php');
-    include("../Model/formCD.php");
-
-    $formCD = new Comment($Comment);
-    $result = $formCD->getComments();
-    echo "This is printed by PHP";
-
-    foreach ($result as $value) {
-      echo "<p> Name: " . $value["username"];
-      echo " Comment: " . $value["comment"];
-    }
-    ?>
-</div>
   </div>
+
+
   <script>
     var dropdown = document.getElementsByClassName("dropdown-btn");
     var i;

@@ -5,16 +5,17 @@ require '../vendor/autoload.php';
 
 include('../Model/config.php');
 
-include_once('../Model/formCD.php');
+include_once('../Model/forumCD.php');
 
-$admin=new Comment($comments);
+$forumEntry=new Comment($comments);
 
 $username=$_GET["username"];
 $comment=$_GET["comment"];
 
+
 if($username!=null&&$comment!=null)
-{$admin->insert($username,$comment);
-    echo "am inserat cu succes aici";
+{
+    $forumEntry->insert($username,$comment);
 }
 
 ?>
