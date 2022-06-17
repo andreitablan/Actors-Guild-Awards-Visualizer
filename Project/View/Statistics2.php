@@ -143,27 +143,8 @@
 
 
     <?php
-    require '../vendor/autoload.php';
-    include('../Model/config.php');
-    include_once('../Model/post.php');
-
-    $post = new Post($users);
-
-    $category1 = $post->getPersonsByCategory("FEMALE ACTOR IN A LEADING ROLE");
-    $category2 = $post->getPersonsByCategory("MALE ACTOR IN A LEADING ROLE");
-    $category3 = $post->getPersonsByCategory("FEMALE ACTOR IN A SUPPORTING ROLE");
-    $category4 = $post->getPersonsByCategory("MALE ACTOR IN A SUPPORTING ROLE");
-    $category5 = $post->getPersonsByCategory("FEMALE ACTOR IN A DRAMA SERIES");
-    $category6 = $post->getPersonsByCategory("MALE ACTOR IN A DRAMA SERIES");
-    $category7 = $post->getPersonsByCategory("FEMALE ACTOR IN A COMEDY SERIES");
-    $category8 = $post->getPersonsByCategory("MALE ACTOR IN A COMEDY SERIES");
-    $category9 = $post->getPersonsByCategory("FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES");
-    $category10 = $post->getPersonsByCategory("MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES");
-    $category11 = $post->getPersonsByCategory("CAST IN A MOTION PICTURE");
-    $category12 = $post->getPersonsByCategory("ENSEMBLE IN A COMEDY SERIES");
-    $category13 = $post->getPersonsByCategory("ENSEMBLE IN A DRAMA SERIES");
-    $year = $post->getYear();
-
+    $action=3;
+    include("../Controller/statisticsController.php");
 
     ?>
     <button id="downloadWebP" class="button">Export as webP</button>
@@ -327,26 +308,8 @@
       }
 
       <?php
-      require '../vendor/autoload.php';
-      include('../Model/config.php');
-      include_once('../Model/post.php');
-
-      $post = new Post($users);
-
-      $category1 = $post->getPersonsByCategory("FEMALE ACTOR IN A LEADING ROLE")+20;
-      $category2 = $post->getPersonsByCategory("MALE ACTOR IN A LEADING ROLE")+20;
-      $category3 = $post->getPersonsByCategory("FEMALE ACTOR IN A SUPPORTING ROLE")+20;
-      $category4 = $post->getPersonsByCategory("MALE ACTOR IN A SUPPORTING ROLE")+20;
-      $category5 = $post->getPersonsByCategory("FEMALE ACTOR IN A DRAMA SERIES")+20;
-      $category6 = $post->getPersonsByCategory("MALE ACTOR IN A DRAMA SERIES")+20;
-      $category7 = $post->getPersonsByCategory("FEMALE ACTOR IN A COMEDY SERIES")+20;
-      $category8 = $post->getPersonsByCategory("MALE ACTOR IN A COMEDY SERIES")+20;
-      $category9 = $post->getPersonsByCategory("FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES")+20;
-      $category10 = $post->getPersonsByCategory("MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES")+20;
-      $category11 = $post->getPersonsByCategory("CAST IN A MOTION PICTURE")+20;
-      $category12 = $post->getPersonsByCategory("ENSEMBLE IN A COMEDY SERIES")+20;
-      $category13 = $post->getPersonsByCategory("ENSEMBLE IN A DRAMA SERIES")+20;
-      $year = $post->getYear();
+      $action=4;
+      include("../Controller/statisticsController.php");
   
       ?>
 

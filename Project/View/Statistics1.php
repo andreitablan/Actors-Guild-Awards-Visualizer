@@ -140,16 +140,9 @@
     </div>
 
     <?php
-    //somewhere set a value
-    require '../vendor/autoload.php';
-    include('../Model/config.php');
-    include_once('../Model/post.php');
 
-    $post = new Post($users);
-    $valuew = $post->howManyActorsWon()[0];
-    $valuen = $post->howManyActorsWon()[1];
-    $year = $post->getYear();
-
+    $action=1;
+    include("../Controller/statisticsController.php");
 
     ?>
     <button id="downloadWebP" class="button">Export as webP</button>
@@ -280,18 +273,8 @@
 
 
       <?php
-      require '../vendor/autoload.php';
-      include('../Model/config.php');
-      include_once('../Model/post.php');
-
-      $post = new Post($users);
-
-      $arraytosend=$post->howManyActorsWon();
-      $won=$arraytosend[0];
-      $notwon=$arraytosend[1];
-
-      $year = $post->getYear();
-
+     $action = 2;
+     include("../Controller/statisticsController.php");
       ?>
 
       function downloadSVG() {

@@ -142,19 +142,10 @@
 
 
     <?php
-    require '../vendor/autoload.php';
-    include('../Model/config.php');
-    include_once('../Model/post.php');
-
-    $post = new Post($users);
-
-    $men = $post->getMen();
-    $women = $post->getWomen();
-
-    $year = $post->getYear();
-
-
+    $action=5;
+    include("../Controller/statisticsController.php");
     ?>
+
     <button id="downloadWebP" class="button">Export as webP</button>
     <button id="downloadSVG" class="button">Export as SVG</button>
     <button id="downloadCSV" class="button">Export as CSV</button>
@@ -281,19 +272,8 @@
 
        
       <?php
-      require '../vendor/autoload.php';
-      include('../Model/config.php');
-      include_once('../Model/post.php');
-
-      $post = new Post($users);
-
-      $men=$post->getMen();
-      $women=$post->getWomen();
-      $people=$men+$women;
-      $year = $post->getYear();
-
-      $menHeight=$men*10;
-      $womenHeight=$women*10;
+      $action=6;
+      include("../Controller/statisticsController.php");
       ?>
 
       function downloadSVG() {

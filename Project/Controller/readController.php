@@ -7,11 +7,11 @@ require '../vendor/autoload.php';
 
 include('../Model/config.php');
 
-include_once('../Model/spost.php');
+include_once('../Model/databaseService.php');
 
 $show="";
-$post= new Post($users);
-$result = $post->read($category);
+$database= new Database($users);
+$result = $database->read($category);
 
 foreach($result as $value){
     if((isset($value["show"]) && trim($value["show"]) != '')&&(isset($value["full_name"]) && trim($value["full_name"]) != ''))
