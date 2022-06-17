@@ -14,8 +14,9 @@
 <body>
 
     <header id="showcase">
-    <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
-    <h2 style="text-align: center;">Actors page</h2>    </header>
+        <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+        <h2 style="text-align: center;">Actors page</h2>
+    </header>
 
     <a href="#" class="toggle-button">
         <span class="bar"></span>
@@ -99,21 +100,15 @@
     </section>
     <main id="maine">
         <div class="actor">
-            <img src="" alt="Image">
+            <div class="actorname"></div>
+            <div class="birth-death"></div>
+            <div class="birthplace"></div>
+            <img class="profile_image_actor" src="" alt="Image">
             <a href="">
-                <img alt="IMDB" src="" width="150" height="70">
+                <img class="imdb" alt="IMDB" src="../Resources/Images/IMDB.png" width="150" height="70">
             </a>
-            <div class="id"></div>
             <div class="biography"></div>
-            <div class="birthday"></div>
-            <div class="deathday"></div>
-            <div class="gender"></div>
-            <div class="known_for_department"></div>
-            <div class="name"></div>
-            <div class="place_of_birth"></div>
-            <div class="popularity"></div>
-
-
+            <div class="departament-popularity"></div>
         </div>
     </main>
 
@@ -197,18 +192,16 @@
                     const actorEl = document.createElement('div');
                     actorEl.classList.add('actor');
                     actorEl.innerHTML = `
-             <img src="${myPhoto}" alt="Image">
-             <a href="${myIMDB}">
-                <img alt="IMDB" src="../Resources/Images/IMDB.png" width="150" height="70">
-             </a>
-            <div class="biography">Biography: ${biography}</div>
-            <div class="birthday">Birthday: ${birthday}</div>
-            <div class="deathday">Deathday: ${deathday}</div>
-            <div class="gender">Gender: ${gender}</div>
-            <div class="known_for_department">Departament: ${known_for_department}</div>
-            <div class="name">Name: ${name}</div>
-            <div class="place_of_birth">Place of Birth: ${place_of_birth}</div>
-            <div class="popularity">Popularity: ${popularity}</div>
+        <div class="actor">
+        <div class="actorname">${name}</div>
+        <div class="birth-death">Birthday: ${birthday} <br> Deathday: ${deathday}<br>Gender: ${gender}</div>
+        <div class="birthplace">Place of Birth: ${place_of_birth}</div>
+        <img class="profile_image_actor"  src="${myPhoto}" alt="Image">
+        <a href="${myIMDB}">
+            <img class="imdb"  alt="IMDB" src="../Resources/Images/IMDB.png" width="150" height="70">
+        </a>
+        <div class="biography"> ${biography}</div>
+        <div class="departament-popularity">Departament: ${known_for_department}<br>Popularity: ${popularity}</div>
              `
                     main.appendChild(actorEl);
                 })

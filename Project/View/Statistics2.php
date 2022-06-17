@@ -137,8 +137,8 @@
     <?php
 
     ?>
-    <div style="width: 600px;">
-      <canvas class="canvas2"  id="chart" width="400" height="400"></canvas>
+    <div class="canvas2">
+      <canvas id="chart"></canvas>
     </div>
 
 
@@ -169,63 +169,36 @@
       year = '<?php echo $year; ?>';
       const data = {
         labels: [
-          1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13
+          "F.A-L.R",
+          'M.A-L.R',
+          'F.A-S.R',
+          'M.A-S.R',
+          'F.A-D.S',
+          'M.A-D.S',
+          'F.A-C.S',
+          'M.A-C.S',
+          'F.A-TVM/L.S',
+          'M.A-TVM/L.S',
+          'C.M.P',
+          'E.C.S',
+          'E.D.S'
         ],
         datasets: [{
-            label: '1 - FEMALE ACTOR IN A LEADING ROLE',
-
-
-            data: [category1, category2, category3, category4, category5, category6, category7, category8, category9, category10, category11, category12, category13],
+            label: 'Number of people',
+            data: [category1,category2,category3,category4,category5,category6,category7,category8,category9,category10,category11,category12,category13],
             fill: false,
-
             borderColor: 'rgb(75, 192, 192)',
-
             tension: 0.1
-          }, {
-            label: '2 - MALE ACTOR IN A LEADING ROLE'
-          },
-          {
-            label: '3 - FEMALE ACTOR IN A SUPPORTING ROLE'
-          },
-          {
-            label: '4 - MALE ACTOR IN A SUPPORTING ROLE'
-          },
-          {
-            label: '5 - FEMALE ACTOR IN A DRAMA SERIES'
-          },
-          {
-            label: '6 - MALE ACTOR IN A DRAMA SERIES'
-          },
-          {
-            label: '7 - FEMALE ACTOR IN A COMEDY SERIES'
-          },
-          {
-            label: '8 - MALE ACTOR IN A COMEDY SERIES'
-          },
-          {
-            label: '9 - FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES'
-          },
-          {
-            label: '10 - MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES'
-          },
-          {
-            label: '11 - CAST IN A MOTION PICTURE'
-          },
-          {
-            label: '12 - ENSEMBLE IN A COMEDY SERIES'
-          },
-          {
-            label: '13 - ENSEMBLE IN A DRAMA SERIES'
-          }
-        ]
-
-      };
+          }]
+       };
       const config = {
         type: 'line',
         data: data,
         options: {
           title: {
             display: true,
+            responsive:true,
+            maintainAspectRatio:false,
             text: 'Chart Title'
           },
           scales: {

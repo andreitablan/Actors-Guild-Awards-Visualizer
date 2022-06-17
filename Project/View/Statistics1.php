@@ -135,8 +135,8 @@
       </div>
     </form>
     
-    <div>
-      <canvas class="canvas" id="chart" width="400" height="400"></canvas>
+    <div class="canvas">
+      <canvas id="chart"></canvas>
     </div>
 
     <?php
@@ -178,7 +178,8 @@
         data: data,
         options: {
           animation: false,
-          responsive: false,
+          responsive: true,
+          maintainAspectRatio: false,
           title: {
             display: true,
             text: 'Chart Title'

@@ -14,7 +14,7 @@
 <body>
 
   <header id="showcase">
-  <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
     <h2 style="text-align: center;">Movie page</h2>
   </header>
 
@@ -98,12 +98,11 @@
   </section>
   <main id="maine">
     <div class="movie">
-      <img src="" alt="Image">
-      <div class="title"></div>
-      <div class="vote_average"></div>
-      <div class="release_date"></div>
-      <div class="overview"></div>
-
+      <img class="movie_image" src="" alt="Image">
+      <div class="movie_title"></div>
+      <div class="movie_vote_average"></div>
+      <div class="movie_release_date"></div>
+      <div class="movie_overview"></div>
     </div>
 
   </main>
@@ -177,11 +176,12 @@
 
           movieEl.classList.add('movie');
           movieEl.innerHTML = `
-             <img src="${myPhoto}" alt="Image">
-             <div class="title">Title: ${myTitle}</div>
-             <div class="vote_average">Score: ${myAverage}</div>
-             <div class="release_date">Release Date: ${myReleaseDate}</div>
-             <div class="overview">Overview: ${myOverview}</div>
+      <div class="movie">
+      <img class="movie_image" src="${myPhoto}" alt="Image">
+      <div class="movie_title">${myTitle}</div>
+      <div class="movie_vote_average">Score: ${myAverage}</div>
+      <div class="movie_release_date">Release Date: ${myReleaseDate}</div>
+      <div class="movie_overview">Overview: ${myOverview}</div>
              `
 
 

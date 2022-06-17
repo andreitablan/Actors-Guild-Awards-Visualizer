@@ -12,8 +12,7 @@ $forumEntry=new Comment($comments);
 $username=$_GET["username"];
 $comment=$_GET["comment"];
 
-
-if($username!=null&&$comment!=null)
+if($username!=null&&$comment!=null&&(isset($username) && trim($username) != '')&&(isset($comment) && trim($comment) != ''))
 {
     $forumEntry->insert($username,$comment);
 }

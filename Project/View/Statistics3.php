@@ -136,10 +136,9 @@
     <?php
 
     ?>
-    <div style="width: 600px;">
-      <canvas class="canvas3"  id="chart" width="400" height="300"></canvas>
+    <div class="canvas3">
+      <canvas id="chart"></canvas>
     </div>
-
 
     <?php
     $action=5;
@@ -189,6 +188,8 @@
         options: {
           title: {
             display: true,
+            responsive:false,
+            maintainAspectRatio:false,
             text: 'Chart Title'
           },
           scales: {

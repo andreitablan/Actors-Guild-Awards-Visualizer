@@ -67,15 +67,16 @@
   <?php
   include("../Controller/showComments.php");
   ?>
-
-
+<footer>
+  <div class="write-a-comment">
   <form class="box2" id="WriteComment" action='#' method="GET">
     <h2>Write a comment</h2>
     <input type="text" name="username" placeholder="Enter an username" id="username">
     <input type="text" name="comment" placeholder="Write a comment..." id="comment">
     <input type="submit" name="" value="Send" onclick=' this.form.submit();'>
   </form>
-
+  </div>
+  </footer>
 
   <div class="content">
     <?php
