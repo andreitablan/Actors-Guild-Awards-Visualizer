@@ -73,7 +73,7 @@
     <h2>Write a comment</h2>
     <input type="text" name="username" placeholder="Enter an username" id="username">
     <input type="text" name="comment" placeholder="Write a comment..." id="comment">
-    <input type="submit" name="" value="Send" onclick=' this.form.submit();'>
+    <input type="submit" name="submit" value="Send" onclick=' this.form.submit();'>
   </form>
   </div>
   </footer>

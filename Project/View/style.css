@@ -304,7 +304,7 @@ ul {
   font-weight: 600;
 }
 
-@media screen and (max-width:330) {
+@media screen and (max-width:330px) {
   .new-winners-section {
     display: none;
   }
@@ -580,12 +580,6 @@ body {
   text-align: center;
 }
 
-.box.h1 {
-  color: white;
-  text-transform: uppercase;
-  font-weight: 700px;
-}
-
 .box input[type="text"],
 .box input[type="password"] {
   border: 0;
@@ -599,12 +593,10 @@ body {
   outline: none;
   color: rgb(0, 0, 0);
   border-radius: 24px;
-  transition: 0.25px;
 }
 
 .box input[type="text"]:focus,
 .box input[type="password"]:focus {
-  width: 270 px;
   border-color: rgba(255, 2, 2, 0.632);
 }
 
@@ -619,7 +611,7 @@ body {
   outline: none;
   color: rgb(253, 1, 1);
   border-radius: 24px;
-  transition: 0.25px;
+  /*transition: 0.25px;*/
   cursor: pointer;
 }
 
@@ -627,7 +619,7 @@ body {
   background: rgb(255, 163, 34);
 }
 
---------------------------------------- body {
+body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -691,7 +683,6 @@ option {
 .box1.h1 {
   color: white;
   text-transform: uppercase;
-  font-weight: 700px;
 }
 
 .box1 input[type="text"],
@@ -709,12 +700,10 @@ box1.select {
   outline: none;
   color: rgb(0, 0, 0);
   border-radius: 24px;
-  transition: 0.25px;
 }
 
 .box1 input[type="text"]:focus,
 .box1 input[type="password"]:focus {
-  width: 270 px;
   border-color: rgba(255, 2, 2, 0.632);
 }
 
@@ -729,7 +718,7 @@ box1.select {
   outline: none;
   color: rgb(253, 1, 1);
   border-radius: 24px;
-  transition: 0.25px;
+ /* transition: 0.25px;*/
   cursor: pointer;
 }
 
@@ -737,7 +726,7 @@ box1.select {
   background: rgb(255, 163, 34);
 }
 
---------------------------------------------- body {
+ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -756,7 +745,7 @@ box1.select {
 .box2.h2 {
   color: white;
   text-transform: uppercase;
-  font-weight: 700px;
+  /*font-weight: 700px;*/
 }
 
 .box2 input[type="text"],
@@ -772,12 +761,11 @@ box1.select {
   outline: none;
   color: rgb(0, 0, 0);
   border-radius: 24px;
-  transition: 0.25px;
+  /*transition: 0.25px;*/
 }
 
 .box2 input[type="text"]:focus,
 .box2 input[type="username"]:focus {
-  width: 270 px;
   border-color: rgba(255, 2, 2, 0.632);
 }
 
@@ -792,7 +780,7 @@ box1.select {
   outline: none;
   color: rgb(253, 1, 1);
   border-radius: 24px;
-  transition: 0.25px;
+  /*transition: 0.25px;*/
   cursor: pointer;
 }
 
@@ -800,7 +788,7 @@ box1.select {
   background: rgb(255, 163, 34);
 }
 
------------------------------------- body {
+body {
   margin: 1px;
   padding: 8px;
   font-family: sans-serif;
@@ -824,7 +812,7 @@ box1.select {
   color: white;
   text-align: center;
   text-transform: uppercase;
-  font-weight: 700px;
+  /*font-weight: 700px;*/
 }
 
 .fallbackYearPicker input[type="text"],
@@ -840,16 +828,14 @@ box1.select {
   outline: none;
   color: rgb(0, 0, 0);
   border-radius: 24px;
-  transition: 0.25px;
 }
 
 .fallbackYearPicker input[type="text"]:focus,
 .fallbackYearPicker input[type="year"]:focus {
-  width: 270 px;
   border-color: rgba(255, 2, 2, 0.632);
 }
 
---------------------------------- body {
+body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -914,8 +900,7 @@ body {
   }
 }
 
-
--------------------------------------------------------------------------- * {
+* {
   box-sizing: border-box;
 }
 

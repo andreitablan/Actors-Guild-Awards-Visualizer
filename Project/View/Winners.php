@@ -155,6 +155,7 @@
 
   <button type="button" class="collapsible">FEMALE ACTOR IN A LEADING ROLE</button>
   <div class="content">
+    <p>
     <?php $category = "FEMALE ACTOR IN A LEADING ROLE";
     include("../Controller/readController.php");
     ?>

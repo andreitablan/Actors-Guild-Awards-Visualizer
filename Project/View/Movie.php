@@ -84,21 +84,20 @@
 
 
   <h2 style="text-align: center;"><b>&emsp; Welcome to the movie details page</b></h2>
-  <section id="section-a">
+  <div id="section-a">
     <p>
     <div class="search-container">
-      </form>
       <form id="form" method="get" class="search-bar">
         <input type="text" placeholder="Search for a movie..." name="search" id="search" class="search">
         <button type="submit"><i class="fa fa-search"></i></button>
       </form>
       <br>
     </div>
+  </div>
 
-  </section>
   <main id="maine">
     <div class="movie">
-      <img class="movie_image" src="" alt="Image">
+      <img class="movie_image" src= "#" alt="Image">
       <div class="movie_title"></div>
       <div class="movie_vote_average"></div>
       <div class="movie_release_date"></div>

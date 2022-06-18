@@ -86,9 +86,7 @@
 
     <h2 style="text-align: center;"><b>&emsp; Welcome to the actor page</b></h2>
 
-    <section id="section-a">
-        <p>
-
+    <div id="section-a">
         <div class="search-container">
             <form id="form" method="get" class="search-bar">
                 <input type="text" placeholder="Search for an actor..." name="search" id="search" class="search">
@@ -97,7 +95,8 @@
             <br>
         </div>
 
-    </section>
+    </div>
+    
     <main id="maine">
         <div class="actor">
             <div class="actorname"></div>

@@ -69,7 +69,7 @@
             <h2>Login</h2>
             <input type="text" name="username" placeholder="Enter Admin Username" id="username">
             <input type="password" name="password" placeholder="Enter Password" id="password">
-            <input type="submit" name="" value="Login" onclick="login()">
+            <input type="submit" name="submit" value="Login" onclick="login()">
         </form>
     </div>
     <?php
