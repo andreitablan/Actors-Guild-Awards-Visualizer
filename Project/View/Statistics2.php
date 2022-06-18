@@ -148,7 +148,6 @@
 
     ?>
     <button id="downloadWebP" class="button">Export as webP</button>
-    <button id="downloadSVG" class="button">Export as SVG</button>
     <button id="downloadCSV" class="button">Export as CSV</button>
     <button id="downloadPNG" class="button">Export as PNG</button>
 
@@ -235,9 +234,6 @@
       });
       document.getElementById("downloadPNG").addEventListener("click", function() {
         downloadPNG();
-      });
-      document.getElementById("downloadSVG").addEventListener("click", function() {
-        downloadSVG();
       });
       document.getElementById("downloadWebP").addEventListener("click", function() {
         downloadWebP();
