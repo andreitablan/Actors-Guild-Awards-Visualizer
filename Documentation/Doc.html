@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation</title>
+</head>
+
+<body>
+
+    <article>
+        <header>
+            <h1>
+                AGA (Actors Guild Awards Visualizer)
+            </h1>
+        </header>
+
+        <div role="contentinfo">
+            <section typeof="sa:AuthorsList">
+                <h2>Authors</h2>
+                <ul>
+                    <li typeof="sa:ContributorRole" property="schema:author">
+                        <span typeof="schema:Person">
+                            <meta property="schema:givenName" content="Dan">
+                            <meta property="schema:additionalName" content="Adrian">
+                            <meta property="schema:familyName" content="Leagan">
+                            <span property="schema:name">Leagan D. Dan-Adrian</span>
+                        </span>
+                        <ul>
+                            <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                                <a href="mailto:dan.leagan@info.uaic.ro"
+                                    property="schema:email">dan.leagan@info.uaic.ro</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li typeof="sa:ContributorRole" property="schema:author">
+                        <span typeof="schema:Person">
+                            <meta property="schema:givenName" content="Andrei">
+                            <meta property="schema:additionalName" content="Razvan">
+                            <meta property="schema:familyName" content="Tablan">
+                            <span property="schema:name">Tablan C. Andrei-Razvan</span>
+                        </span>
+                        <ul>
+                            <li property="schema:roleContactPoint" typeof="schema:ContactPoint">
+                                <a href="mailto:andrei.tablan@info.uaic.ro"
+                                    property="schema:email">andrei.tablan@info.uaic.ro</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </section>
+        </div>
+
+        <section>
+            <h3>1. Introduction</h3>
+            <section>
+                <h4>1.1 Purpose</h4>
+                <p>
+                    The purpose of this document is to present a web application used to vizualize the
+                    actors nominalization in the last years at Screen Actors Guild Awards. This file is 
+                    intendet to show to the user the features of the application.
+                </p>
+            </section>
+
+            <section>
+                <h4>1.2 Document Conventions</h4>
+                <p>
+                    This Document was created based on the IEEE template for System Requirement
+                    Specification Documents.
+                </p>
+            </section>
+
+            <section>
+                <h4>1.3 Intended Audience and Reading Suggestions</h4>
+                <p>
+                    Users who are interested in movies and the awards given for actors. This document
+                    may be used also for the understanding of the code behind the application by any 
+                    developer, tester or project manager.  
+                </p>
+            </section>
+
+            <section>
+                <h4>1.4 Product Scope</h4>
+                <p>
+                    Actors Guild Awards Visualizer intends to help people by all ages see the nominalizations
+                    and the winners for all 13 categories in the SAG awards.
+                </p>
+            </section>
+
+            <section>
+                <h4>1.5 References</h4>
+                <ol>
+                    <li typeof="schema:WebPage" role="doc-biblioentry"
+                        resource="https://github.com/andreitablan/Actors-Guild-Awards-Visualizer" property="schema:citation">
+                        <cite property="schema:name">
+                            <a href="https://github.com/andreitablan/Actors-Guild-Awards-Visualizer">Actors-Guild-Awards-Visualizer</a>
+                        </cite>
+                    </li>
+                    <li typeof="schema:WebPage" role="doc-biblioentry"
+                        resource="https://github.com/rick4470/IEEE-SRS-Tempate#42-system-feature-2-and-so-on"
+                        property="schema:citation">
+                        <cite property="schema:name">
+                            <a href="https://github.com/rick4470/IEEE-SRS-Tempate#42-system-feature-2-and-so-on">IEEE
+                                Template for System Requirements Specification Documents</a>
+                        </cite>
+                    </li>
+                </ol>
+            </section>
+
+
+
+        </section>
+
+        <section>
+            <h3>2. Overall Description</h3>
+            <section>
+                <h4>2.1 Product Perspective</h4>
+                <p>
+                    The Actors-Guild-Awards-Visualizer web application is a new selfcontained product
+                    which will help people interact with eachother by seeing other comments on actors
+                    pages. They can also use it for visualizing statistics based on the nominalizations
+                    in different years. 
+                </p>
+            </section>
+
+            <section>
+                <h4>2.2 Product Functions</h4>
+                <p>
+                    The application manages different pages for users: Home, Winners, Forum, Movie Details, Actors, Admin, Statistic1, Statistic2, Statistic3. 
+                    The application offers the option of exporting different statistics in formats such as CSV, WebP,SVG and PNG. 
+                    It also allows users to search for informations about movies and actors, and view news.
+                </p>
+                <p>Home page : This is the landing page and it contains the general informations for this website, the latest news about the event, different movie trailers, and a search system for search different news on Google.</p>
+                <ul>
+                    <li>
+                        search for anything: the users will be able to search news directly on Google
+                    </li>
+                    <li>
+                        general news : it shows general news about the SAG awards
+                    </li>
+                    <li>
+                        new winners 2022 section: redirects the user to a movie trailers
+                    </li>
+                    <li>
+                        the main menu : it redirects to other pages
+                    </li>
+                </ul>
+
+                <p>Winners page : It shows the winners for a specific category and year</p>
+                <ul>
+                    <li>
+                        choose year : selects the year
+                    </li>
+                    <li>
+                        choose category : selects the winner for a category in the selected year
+                    </li>
+                    <li>
+                        view news: redirects to specific news for the selected year
+                    </li>
+                    <li>
+                        about section: redirects to a wikipedia page about the selected year
+                    </li>
+                    <li>
+                        the main menu : it redirects to other pages
+                    </li>
+                </ul>
+
+                <p>Forum page : Gives the users the oportunity to post or read messages from other users </p>
+               <ul>
+                <li>
+                    username : the user sets the name associated with the message
+                </li>
+                <li>
+                    message : the user writes and then sends the message
+                </li>
+                <li>
+                    the main menu : it redirects to other pages
+                </li>
+                </ul>
+
+                <p>Movie details page : It shows informations about a searched movie</p>
+                <ul>
+                <li>
+                    search bar : the user introduces the name of the wanted movie
+                </li>
+                <li>
+                    viewing information : the information (image, name, release date, score, overview) will be displayed on the screen
+                </li>
+                <li>
+                    the main menu : it redirects to other pages
+                </li>
+                </ul>
+
+                
+                <p>Actors page: It shows informations about a searched actor</p>
+                <ul>
+                <li>
+                    search bar : the user introduces the name of the wanted actor
+                </li>
+                <li>
+                    viewing information : the information (image, name, biography, department, popularity, place of birth, birthday, deathday, imdb link) will be displayed on the screen
+                </li>
+                <li>
+                    the main menu : it redirects to other pages
+                </li>
+                </ul>
+
+                <p>Admin page: Allows an user to log in as an administrator, in order to insert or delete a nominalization from the database</p>
+                <ul>
+                    <li>
+                        login form : the user inputs an admin account in order to acces the insert/delete form
+                    </li>
+                    <li>
+                        insert/delete form: the user provides information about the desired nominalization 
+                    </li>
+                    <li>
+                        the main menu : it redirects to other pages
+                    </li>
+                </ul>
+
+
+                <p>Statistic1 page : It show a statistic about how many winners contains the database, in a selected year </p>
+                <ul>
+                    <li>
+                        choose year : it lets user choose the year for a specific statistic
+                    </li>
+                    <li>
+                        view statistic : a visual representation of the statistic
+                    </li>
+                    <li>
+                        export statistic: exports the statistic as WebP, SVG, CSV, PNG
+                    </li>
+                    <li>
+                        the main menu : it redirects to other pages
+                    </li>
+                </ul>
+
+                <p>Statistic2 page : It show a statistic about how many nominalizations there are, in every category, in a selected year </p>
+                <ul>
+                    <li>
+                        choose year : it lets user choose the year for a specific statistic
+                    </li>
+                    <li>
+                        view statistic : a visual representation of the statistic
+                    </li>
+                    <li>
+                        export statistic: exports the statistic as WebP, CSV, PNG
+                    </li>
+                    <li>
+                        the main menu : it redirects to other pages
+                    </li>
+                </ul>
+
+                <p>Statistic3 page : It show a statistic about how many men and women were nominated, in a selected year </p>
+                <ul>
+                    <li>
+                        choose year : it lets user choose the year for a specific statistic
+                    </li>
+                    <li>
+                        view statistic : a visual representation of the statistic
+                    </li>
+                    <li>
+                        export statistic: exports the statistic as WebP, SVG, CSV, PNG
+                    </li>
+                    <li>
+                        the main menu : it redirects to other pages
+                    </li>
+                </ul>
+
+            </section>
+
+            <section>
+                <h4>2.3 User Classes and Characteristics</h4>
+                <ul>
+                    <li>
+                        Common user : can view the informations the site provides.
+                    </li>
+                    <li>
+                        administrator : can insert/delete information from the database
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h4>2.4 Operating Environment</h4>
+                <p>
+                    The application will run on any device with access to the internet and an installed browser.
+                </p>
+            </section>
+
+            <section>
+                <h4>2.5 Design and Implementation Constraints</h4>
+                <p>
+                    Actors-Guild-Awards-Visualizer application will use javascript, html, css and php 
+                </p>
+            </section>
+
+            <section>
+                <h4>2.6 User Documentation</h4>
+                <p>
+                    We will provide the user a tudorial in which we will explain how the website can be used.
+                    
+                </p>
+            </section>
+
+            <section>
+                <h4>2.7 Assumptions and Dependencies</h4>
+                <p>
+                    The application depends on :
+                </p>
+                <ul>
+                <li>
+                   News sites in order to provide reliable news for the users.
+                </li>  
+                <li>
+                    IMDB, Wikipedia and Google for searching specific news and information by the users.
+                </li>
+                <li>
+                    TMDB API for providing general information about movies and actors.
+                </li>
+                <li>
+                    Restful API in order to communicate with the database.
+                </li>
+                </ul>
+            </section>
+
+
+        </section>
+
+        <section>
+            <h3>3. External Interface Requirements</h3>
+
+            <section>
+                <h4>3.1 User Interfaces</h4>
+                    These are some pages we implemented.
+                <div>
+                    <figure typeof="sa:image">
+                        <figcaption>Home page</figcaption>
+                        <img src="Images/Home.png" alt="Home" style="width:50%;">
+                    </figure>
+                    <figure typeof="sa:image">
+                        <figcaption>Winners page</figcaption>
+                        <img src="Images/Winners.png"alt="Winners"  style="width:50%;" >
+                    </figure>
+                    <figure typeof="sa:image">
+                        <figcaption>Forum page</figcaption>
+                        <img src="Images/Forum.png" alt="Statistics"  style="width:50%;">
+                    </figure>
+                    <figure typeof="sa:image">
+                        <figcaption>Movie details page</figcaption>
+                        <img src="Images/Movie.png" alt="Statistics"  style="width:50%;">
+                    </figure>
+                    <figure typeof="sa:image">
+                        <figcaption>Actor page</figcaption>
+                        <img src="Images/Actors.png" alt="Statistics"  style="width:50%;">
+                    </figure>
+                    <figure typeof="sa:image">
+                        <figcaption>Admin page (login)</figcaption>
+                        <img src="Images/Admin1.png" alt="Statistics"  style="width:50%;">
+                    </figure>
+                    <figure typeof="sa:image">
+                        <figcaption>Admin page (insert/delete)</figcaption>
+                        <img src="Images/Admin2.png" alt="Statistics"  style="width:50%;">
+                    </figure>
+                    <figure typeof="sa:image">
+                        <figcaption>Statistic page (1)</figcaption>
+                        <img src="Images/Statistic1.png" alt="Statistics"  style="width:50%;">
+                    </figure>
+                    <figure typeof="sa:image">
+                        <figcaption>Statistic page (2)</figcaption>
+                        <img src="Images/Statistic2.png" alt="Statistics"  style="width:50%;">
+                    </figure>
+                    <figure typeof="sa:image">
+                        <figcaption>Statistic page (3)</figcaption>
+                        <img src="Images/Statistic3.png" alt="Statistics"  style="width:50%;">
+                    </figure>
+
+                </div>
+            </section>
+
+            <section>
+                <h4>3.2 User Steps</h4>
+            
+                <div>
+                    <ul>
+                    <li typeof="schema:WebPage" 
+                        resource="https://www.figma.com/proto/naNlHR1gVGMzriSoIkNHgG/Actors-Guild-Awards?node-id=0%3A1" property="schema:citation">
+                        <cite property="schema:name">
+                            <a href="https://www.figma.com/proto/naNlHR1gVGMzriSoIkNHgG/Actors-Guild-Awards?node-id=0%3A1">Actors-Guild-Awards-Visualizer WireFrame</a>
+                        </cite>
+                    </li>
+                    </ul>
+                </div>
+            </section>
+
+            <section>
+                <h4>3.3 Hardware Interfaces</h4>
+                <p>
+                    The minimum software requirements of Actors-Guild-Awards-Visualizer application are a working device and connection to the
+                    Internet.
+                </p>
+            </section>
+
+            <section>
+                <h4>3.4 Software Interfaces</h4>
+                <p>
+                    The minimum software requirements of Actors-Guild-Awards-Visualizer application are a working browser.
+                </p>
+            </section>
+
+            <section>
+                <h4>3.5 Communications Interfaces</h4>
+                <p>
+                    Actors-Guild-Awards-Visualizer requires Internet connection. The communication standard that is to be used is HTTP.
+                </p>
+            </section>
+
+        </section>
+
+        <section>
+            <h3>4. System Features</h3>
+
+            <section>
+                <h4>4.1 Navigation menu</h4>
+                <p>
+                    Users can navigate to other pages in order to use other functionalities from the website.
+                </p>
+            </section>
+
+            <section>
+                <h4>4.2 Search bar</h4>
+                <p>
+                    Users can search the news on Google Search.
+                </p>
+            </section>
+
+            <section>
+                <h4>4.3 Trailers and News</h4>
+                <p>
+                    Some images and texts have attached hyperlinks to relevand news, trailers and information providers from the internet
+                </p>
+            </section>
+
+            <section>
+                <h4>4.4 Winners display</h4>
+                <p>
+                    Users can choose a specific category and year. After choosing the category by pressing on a collapsible button, the API will get the 2 informations selected.
+                    The two informations are handled by a controller, that will call another php script, in order to query the database with the selected category and year paramteres.
+                    After the query is done, the entries from the database are displayed under every colapsible button.
+                </p>
+            </section>
+
+            <section>
+                <h4>4.5 Forum functionality</h4>
+                <p>
+                    After entering the forum page, a call to the database will be made, which will query every message sent by every user. 
+                    On the bottom of the page, there is a form, used for writing a new message. The user enters the username and message, and after pressing send, the API will insert the information in the database.
+                </p>
+            </section>
+            
+            <section>
+                <h4>4.6 TMDB API call</h4>
+                <p>The TMDB API is integrated with the backend, the php scripts that manage the Movie Details and Actor page, making calls to the external API.
+                   The JSON that is returned by the API is used to generate and display different informations like name, poster, etc.
+                </p>
+            </section>
+
+            <section>
+                <h4>4.7 AJAX</h4>
+                <p>
+                   We used AJAX in order to create the Admin page. For an user, to log in as an admin, it is required to input the username and password in a form.
+                   After the login is completed and verified, ajax replaces the login form, with a form designed to insert or delete information in the database.
+                </p>
+            </section>
+
+            <section>
+                <h4>4.8 Charts, export statistics</h4>
+                <p> 
+                    The backend provides ways of calculating statistics based on the database, draws charts based on the calculated statistics, and exports them in 3 or 4 manners.
+                </p>
+            </section>
+
+            <section>
+                <h4>4.9 Database</h4>
+                <p>
+                    We used MongoDB to store our information, the backend having the responsability to connect to the database, query the database based on our requests, and sending to the front page, the informations found.
+                </p>
+            </section>
+
+            <section>
+                <h4>4.10 Arhitecture</h4>
+                <p>
+                    The arhitecture of the project is organised in an MVC manner. The View is represented by the front pages, the Model is represented by the php scripts that connect to to Database or the external API, and the Controller links the View to the Model.
+                </p>
+            </section>
+      
+        </section>
+
+        <section>
+            <h3>5. Other Nonfunctional Requirements</h3>
+
+            <section>
+                <h4>5.1 Safety Requirements</h4>
+                <p>
+                    The data is stored in databases to ensure that the informations are not lost.
+                    
+                </p>
+            </section>
+
+            <section>
+                <h4>5.2 Security Requirements</h4>
+                <p>
+                   We require that not anybody can insert or delete nominalizations from the database. 
+                   To do so, it is required to log in as an administrator first.
+                </p>
+            </section>
+
+        </section>
+
+        <section>
+            <h3>6. Architecture</h3>
+
+            <section>
+                <h4>6.1 Application Sitemap</h4>
+                    <figure typeof="sa:image">
+                        <figcaption>SiteMap</figcaption>
+                        <img src="Images/SiteMap.png" alt="Sitemap"  style="width:100%;">
+                    </figure>
+            </section>
+
+            <section>
+                <h4>6.2 Communication with the backend</h4>
+                <p>
+                    The communication with the backend is assured by the calls from the frontend pages, while the backend gets the parameters or other informations it needs, in order to perform the tasks.
+                    Depending on the requests, or the controllers called, an action will be performed by model part of the backend.
+                    <br>We used the php language in order the implement the backend.  
+                    <br>We used different calls for different controllers, that assign the roles of querying the database, calling the external API, displaying news, etc. 
+                    <br>Another important functionality is related to the statistics pages. The pages create charts and is able to export them.
+                    <br>The Winners page also required a php implementation in order to place the actors that won an award, according to the category and year of their nominalization.
+                    <br>The Home page also needed backend implementation especially for the search bar and the news functionality. A valid search or a click on one of the news redirects the user to a specific page.
+                 </p>
+            </section>
+
+            <section>
+                <h4>6.3 Data flow structure</h4>
+                    <figure typeof="sa:image">
+                        <figcaption>Use Case diagram</figcaption>
+                        <img src="Images/UseCase.png" alt="Use Case diagram" style="width:100%;">
+                    </figure>
+            </section>
+
+            <section>
+                <h4>6.4 Code Structure</h4>
+                    <figure typeof="sa:image">
+                        <figcaption>UML diagram</figcaption>
+                        <img src="Images/UML.png" alt="UML diagram"  style="width:100%;">
+                    </figure>
+            </section>
+
+            <section>
+                <h4>6.5 Data base structure</h4>
+                <p>
+                    We used two databases implemented with MongoDB. 
+                    One represents the nominations of the Screen Actors Guild Awards.
+                    The other database is used to implement the forum page, and stores the messages and the usernames that wrote a message.
+                    We used the database existent on <a href="https://www.kaggle.com/datasets/unanimad/screen-actors-guild-awards?resource=download
+                    " >Kaggle</a> that contains informations about actors, nominalizations and winners.
+                    <br>The database for actors is made of the following atributes: 
+                    <br>- year: The year of the nominalization. We will use this attribute in oreder to place the actor in the statistics and winner pages.
+                    <br>- category: The category where the actor is nominated. We will use this atribute in order to place the actor in the winners page.
+                    <br>- full_name: The full name of the actor nominated. We will use this atribute in order to create the actor's page.
+                    <br>- show: The show the actor nominated played in.
+                    <br> - won: This attribute is boolean and indicates whether the actor won the nominalization or not. 
+
+                    The database for forum stores the message and the username.
+                 </p>
+            </section>
+
+        </section>
+
+        <section>
+            <h3>Contribution</h3>
+            <section>
+                <h4>Leagan Dan-Adrian and Tablan Andrei-Razvan</h4>
+                
+                You can see the contribution of each member in the image-link for the Trello workspace bellow:
+                <br>
+                <a href="https://trello.com/invite/b/E9z18tXA/7ddfe5facc8bab61e2aa044e1a7f4aa7/cerinţe-interfaţa-si-interacţiunea-cu-utilizatorul">
+                <img src="Images/Trello.png" alt="HTML tutorial" style="width:100%;">
+                </a>
+            </section>
+        </section>
+    </article>
+
+
+
+</body>
+
+</html>

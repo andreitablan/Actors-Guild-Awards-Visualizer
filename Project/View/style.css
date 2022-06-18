@@ -630,10 +630,13 @@ body {
 .box1 {
   width: 500px;
   padding: 30px;
+  position: absolute;
+  top: 80%;
+  left: 45%;
+  transform: translate(-50%, -50%);
   background: rgba(255, 0, 0, 0.938);
   text-align: center;
   display: block;
-  margin:0 auto;
 }
 
 select {
