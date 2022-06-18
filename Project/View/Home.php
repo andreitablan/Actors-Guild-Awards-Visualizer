@@ -89,7 +89,7 @@
   <section id="section-a">
     <p>
 
-    <h2 style="text-align: center;"><b>&emsp; Welcome to Actor Guild Award Vizualizer</b></h2>
+    <h2 style="text-align: center;"><b>&emsp; Welcome to Actors Guild Awards Vizualizer</b></h2>
     <p style="text-align: center;">This is a web page designed for flexible viewing of Actor Nomination Guild (SAG) Awards for recent years. </p>
 
     <div class="search-container">
