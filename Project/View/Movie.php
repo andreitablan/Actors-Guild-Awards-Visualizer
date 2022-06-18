@@ -96,14 +96,7 @@
   </div>
 
   <main id="maine">
-    <div class="movie">
-      <img class="movie_image" src= "#" alt="Image">
-      <div class="movie_title"></div>
-      <div class="movie_vote_average"></div>
-      <div class="movie_release_date"></div>
-      <div class="movie_overview"></div>
-    </div>
-
+    
   </main>
 
   <?php

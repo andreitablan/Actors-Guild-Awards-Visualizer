@@ -98,17 +98,7 @@
     </div>
     
     <main id="maine">
-        <div class="actor">
-            <div class="actorname"></div>
-            <div class="birth-death"></div>
-            <div class="birthplace"></div>
-            <img class="profile_image_actor" src="../Resources/Images/gr.png" alt="Image">
-            <a href="">
-                <img class="imdb" alt="IMDB" src="../Resources/Images/IMDB.png" width="150" height="70">
-            </a>
-            <div class="biography"></div>
-            <div class="departament-popularity"></div>
-        </div>
+       
     </main>
 
     <?php
