@@ -2,7 +2,7 @@
 
 Actors Guild Awards Visualizer is a project for Web Technologies. 
 
-[Presentation video](https://youtu.be/u_FrUTlpEJo)
+[Presentation video](https://youtu.be/qq6ZvO0xW38)
 ## The purpose 
 
 This project aims to vizualize the actors' nominalization in the last years at Screen Actors Guild Awards using a developed API. Other pieces of information about the actors and the movies are being taken from The Movie Database using another API. The web application generates three types of statistics, and it can export them in the CSV, WebP, SVG, and PNG formats. The application offers news about the actors' nominalizations.
