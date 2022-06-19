@@ -113,8 +113,6 @@
         let baseImageURL = null;
 
         const main = document.getElementById('maine');
-        //https://api.themoviedb.org/3/search/person?api_key=9ed4531cf7e78f63121a95b20dedc221&query=Chris Pratt
-        //https://api.themoviedb.org/3/person/73457?api_key=9ed4531cf7e78f63121a95b20dedc221
         let getConfig = function(myActor) {
 
             let url = "".concat(baseURL, 'configuration?api_key=', APIKEY);

@@ -12,6 +12,7 @@ class Statistics
         $this->users = $db;
     }
 
+    /*queries the database fot the number of winners in a year*/
     public function howManyActorsWon()
     {
         $myYear = $_GET["year"];
@@ -45,6 +46,8 @@ class Statistics
         $year = $_GET["year"];
         return $year;
     }
+
+    /*queries the database for the number of entries by a category*/
     public function getPersonsByCategory($category)
     {
 
@@ -61,6 +64,7 @@ class Statistics
         return $numberpeople;
     }
     
+    /*queries the database for the number of men*/
     public function getMen()
     {
         $year = $_GET["year"];
@@ -85,6 +89,8 @@ class Statistics
 
         return $nrPeople - $nrWomen;
     }
+
+     /*queries the database for the number of women*/
     public function getWomen()
     {
         $year = $_GET["year"];

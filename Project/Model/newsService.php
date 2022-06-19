@@ -8,6 +8,7 @@ class News{
 
     }
 
+    /*shows news depending on the year selected*/
     public function showNews()
     {
         $year = $_GET["year"];

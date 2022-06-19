@@ -259,7 +259,7 @@
         link = document.createElement('a');
         link.setAttribute('href', data);
         link.setAttribute('download', filename);
-        document.body.appendChild(link); // Required for FF
+        document.body.appendChild(link); 
         link.click();
         document.body.removeChild(link);
       }
@@ -306,8 +306,6 @@
 
         `;
 
-
-        //let svgData= chart.outerHTML; 
         svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + people + "</svg>";
 
         let svgBlob = new Blob([svgData], {
@@ -321,20 +319,7 @@
         downloadLink.click();
         document.body.removeChild(downloadLink);
       }
-      /*
-      function downloadSVG(){
-      let svgData: string = chart.svgObject.outerHTML; 
-          svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + svgData + "</svg>"; 
-          let svgBlob: Blob = new Blob([svgData], {type:"image/svg+xml;charset=utf-8"}); 
-          let svgUrl: string = URL.createObjectURL(svgBlob); 
-          let downloadLink: HTMLAnchorElement = document.createElement('a'); 
-          downloadLink.rel='nofollow' href = svgUrl; 
-          downloadLink.download = 'chart.svg'; 
-          document.body.appendChild(downloadLink); 
-          downloadLink.click(); 
-          document.body.removeChild(downloadLink); 
-      }
-      */
+   
       function downloadWebP() {
         chart.options.title.text = 'New Chart Title';
         chart.update({

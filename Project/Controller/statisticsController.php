@@ -3,7 +3,7 @@ require '../vendor/autoload.php';
 include('../Model/config.php');
 include_once('../Model/statisticsService.php');
 
-
+/*show statistic 1*/
 if($action == 1)
 {
     $statistics = new Statistics($users);
@@ -11,6 +11,7 @@ if($action == 1)
     $valuen = $statistics->howManyActorsWon()[1];
     $year = $statistics->getYear();
 }
+/*export svg statistic 1*/
 else if($action == 2)
 {
     $statistics = new Statistics($users);
@@ -21,6 +22,7 @@ else if($action == 2)
 
     $year = $statistics->getYear();
 }
+/*show statistic 2*/
 else if($action == 3)
 {
    $statistics = new Statistics($users);
@@ -40,7 +42,7 @@ else if($action == 3)
     $category13 = $statistics->getPersonsByCategory("ENSEMBLE IN A DRAMA SERIES");
     $year = $statistics->getYear();
 }
-
+/*export svg statistic 2*/
 else if($action == 4){
       $statistics = new Statistics($users);
 
@@ -59,6 +61,7 @@ else if($action == 4){
       $category13 = $statistics->getPersonsByCategory("ENSEMBLE IN A DRAMA SERIES")+20;
       $year = $statistics->getYear();
 }
+/*show statistic 3*/
 else if($action == 5){
 
       $statistics = new Statistics($users);
@@ -71,6 +74,7 @@ else if($action == 5){
       $menHeight=$men*10;
       $womenHeight=$women*10;
 }
+/*export svg statistic 3*/
 else if($action == 6){
 
     $statistics = new Statistics($users);

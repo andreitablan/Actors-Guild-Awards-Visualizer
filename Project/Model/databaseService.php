@@ -16,6 +16,8 @@ class Database
     {
         $this->users = $db;
     }
+    
+    /*reads the winners from the database*/
     public function read($category)
     {
 

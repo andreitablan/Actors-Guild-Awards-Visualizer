@@ -144,16 +144,7 @@
         })
         .then((data) => {
 
-          //data.forEach(movie=>{
-
-          //var myData = data.results[0].adult;
-
-          //const{poster_path} = movie;
           myPhoto = ``.concat('https://image.tmdb.org/t/p/w500', data.results[0].poster_path);
-          //document.getElementById("demo").innerHTML = myData;
-          //myPhoto = "https://cdn.vox-cdn.com/thumbor/QIJJcaSeTulwA_UDheOfapQdq_0=/0x0:2040x1360/1200x800/filters:focal(857x517:1183x843)/cdn.vox-cdn.com/uploads/chorus_image/image/70775925/acastro_180427_1777_0001.0.jpg";
-
-          //document.getElementById("image13").innerHTML= myPhoto;
 
           myTitle = data.results[0].title;
           myAverage = data.results[0].vote_average;
@@ -189,32 +180,11 @@
 
     getConfig(show1);
 
-
-
-
+    
     function getSmtg() {
       return myPhoto;
     }
 
-    //document.addEventListener('DOMContentLoaded', getConfig);
-    /*******************************
-    SAMPLE SEARCH RESULTS DATA
-    { "vote_count": 2762, 
-        "id": 578, 
-        "video": false, 
-        "vote_average": 7.5, 
-        "title": "Jaws", 
-        "popularity": 16.273358, 
-        "poster_path": "/l1yltvzILaZcx2jYvc5sEMkM7Eh.jpg", 
-        "original_language": "en", 
-        "original_title": "Jaws", 
-        "genre_ids": [ 27, 53, 12 ], 
-        "backdrop_path": "/slkPgAt1IQgxZXNrazEcOzhAK8f.jpg", 
-        "adult": false, 
-        "overview": "An insatiable great white shark terrorizes the townspeople of Amity Island, The police chief, an oceanographer and a grizzled shark hunter seek to destroy the bloodthirsty beast.", 
-        "release_date": "1975-06-18" 
-    }
-    *******************************/
   </script>
 </body>
 

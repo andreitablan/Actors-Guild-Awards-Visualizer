@@ -92,12 +92,9 @@
         }
 
         function login() {
-            // (A) GET EMAIL + PASSWORD
-
 
             var data = new FormData(document.getElementById("LoginForm"));
 
-            // (B) AJAX REQUEST
             fetch("users.php", {
                     method: "POST",
                     body: data

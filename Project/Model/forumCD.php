@@ -10,6 +10,7 @@ class Comment
         $this->comments = $db;
     }
 
+    /*inserts a new comment into the database*/
     public function insert($username, $comment)
     {
         $this->comments->insertOne(array(
@@ -18,6 +19,8 @@ class Comment
         ));
         header("Location: Forum.php");
     }
+
+    /*prints all comments from the database*/
     public function getComments()
     {
         $peopleComments = $this->comments->find();

@@ -237,7 +237,7 @@
         link = document.createElement('a');
         link.setAttribute('href', data);
         link.setAttribute('download', filename);
-        document.body.appendChild(link); // Required for FF
+        document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
       }
@@ -257,21 +257,6 @@
           duration: 0
         });
       }
-      /*
-      function downloadSVG(){
-      let svgData: string = chart.svgObject.outerHTML; 
-          svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + svgData + "</svg>"; 
-          let svgBlob: Blob = new Blob([svgData], {type:"image/svg+xml;charset=utf-8"}); 
-          let svgUrl: string = URL.createObjectURL(svgBlob); 
-          let downloadLink: HTMLAnchorElement = document.createElement('a'); 
-          downloadLink.rel='nofollow' href = svgUrl; 
-          downloadLink.download = 'chart.svg'; 
-          document.body.appendChild(downloadLink); 
-          downloadLink.click(); 
-          document.body.removeChild(downloadLink); 
-      }
-      */
-
 
       <?php
      $action = 2;
@@ -293,8 +278,6 @@
         <text x="10" y="160" style="fill:blue;">Did not win: <?php echo $notwon?></text>
         `;
 
-
-        //let svgData= chart.outerHTML; 
         svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + people + "</svg>";
 
         let svgBlob = new Blob([svgData], {
@@ -308,58 +291,6 @@
         downloadLink.click();
         document.body.removeChild(downloadLink);
       }
-
-
-      /*function downloadSVG(){
-          if (chart.options.animation !== false) {
-          console.warn('Cannot create SVG: "animation" is not set to false (see the options section)');
-          return;
-        }
-        if (chart.options.responsive !== false) {
-          console.warn('Cannot create SVG: "responsive" is not set to false (see the options section)');
-          return;
-        }
-
-        tweakLib();
-
-        // get the dimensions of our original chart
-        let chartCanvas = document.getElementById('canvas');
-        let width =  chartCanvas.offsetWidth;
-        let height = chartCanvas.offsetHeight;
-
-        // create an svg version of the chart
-        let svgContext = C2S(width, height);
-        let svgChart = new Chart(svgContext, chartSettings);
-
-        // create download link
-        let link = document.createElement('a');
-        link.href = 'data:image/svg+xml;utf8,' + encodeURIComponent(svgContext.getSerializedSvg());
-        link.download = filename;
-        link.text = linkText;
-
-        // add link to the page
-        document.body.appendChild(link);
-        link.click();
-      }
-
-      function tweakLib() {
-        C2S.prototype.getContext = function(contextId) {
-          if (contextId === '2d' || contextId === '2D') {
-            return this;
-          }
-          return null;
-        }
-        C2S.prototype.style = function() {
-          return this.__canvas.style;
-        }
-        C2S.prototype.getAttribute = function(name) {
-          return this[name];
-        }
-        C2S.prototype.addEventListener = function(type, listener, eventListenerOptions) {
-         
-        }
-      }*/
-
 
 
       function downloadWebP() {
