@@ -589,7 +589,16 @@
                 </section>
 
                 <section>
-                    <h4>4.7 AJAX</h4>
+                    <h4>4.7 REST API</h4>
+                    <p>
+                        In order to implement some functionalities, we designed a REST API. 
+                        We make make get calls in order to get the information about the winners, and the last commentaries from the forum, 
+                        and post calls in order to insert a new comment, or a new nominalization, into the database.
+                    </p>
+                </section>
+
+                <section>
+                    <h4>4.8 AJAX</h4>
                     <p>
                         We used AJAX in order to create the Admin page. For an
                         user, to log in as an admin, it is required to input the
@@ -601,7 +610,7 @@
                 </section>
 
                 <section>
-                    <h4>4.8 Charts, export statistics</h4>
+                    <h4>4.9 Charts, export statistics</h4>
                     <p>
                         The backend provides ways of calculating statistics
                         based on the database, draws charts based on the
@@ -611,7 +620,7 @@
                 </section>
 
                 <section>
-                    <h4>4.9 Database</h4>
+                    <h4>4.10 Database</h4>
                     <p>
                         We used MongoDB to store our information, the backend
                         having the responsability to connect to the database,
@@ -621,7 +630,7 @@
                 </section>
 
                 <section>
-                    <h4>4.10 Arhitecture</h4>
+                    <h4>4.11 Arhitecture</h4>
                     <p>
                         The arhitecture of the project is organised in an MVC
                         manner. The View is represented by the front pages, the
@@ -678,6 +687,7 @@
                         to perform the tasks.
                         Depending on the requests, or the controllers called, an
                         action will be performed by model part of the backend.
+                        The REST API inserts, deletes, or returns a json, depending on the call from the frontend
                         <br>We used the php language in order the implement the
                         backend.
                         <br>We used different calls for different controllers,

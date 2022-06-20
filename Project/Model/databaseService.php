@@ -18,10 +18,10 @@ class Database
     }
     
     /*reads the winners from the database*/
-    public function read($category)
+    public function read()
     {
-
-        $an = $_GET["year"];
+        $an=$_GET["year"];
+        $category=$_GET["category"];
 
         $cursor = $this->users->find(
             ['won' => 'True', 'category' => $category, 'year' => new \MongoDB\BSON\Regex($an)]

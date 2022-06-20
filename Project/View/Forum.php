@@ -64,9 +64,38 @@
     </div>
   </div>
 
-  <?php
-  include("../Controller/showComments.php");
-  ?>
+  <div id="maine">
+
+  </div>
+
+  <script>
+      var main1 = document.getElementById('maine');
+      main1.innerHTML = '';
+      var url1='http://localhost/ProjectC/Model/forumGetComments.php';
+     
+      fetch(url1)
+      .then((response) => response.json())
+      .then ( (myData) => {
+        console.log(myData);
+       
+        myData.data.forEach(movie => {
+        
+        const{username,comment} =  movie;
+
+        let winnerEl = document.createElement('div');
+        winnerEl.classList.add('winner');
+        winnerEl.innerHTML=`
+        <div class="forum">
+        <div class="forum_comment"> ${username}: ${comment}</div>
+        </div>
+        `
+        main1.appendChild(winnerEl);
+        })
+        }
+    
+      )
+      .catch( (error) => console.log(error))
+    </script>
 <footer>
   <div class="write-a-comment">
   <form class="box2" id="WriteComment" action='#' method="GET">
@@ -78,11 +107,11 @@
   </div>
   </footer>
 
-  <div class="content">
-    <?php
-    include("../Controller/forumController.php");
-    ?>
-  </div>
+   <script>
+    <?php $username=$_GET["username"]; echo "var username = '$username';"; $comment=$_GET["comment"]; echo "var comment = '$comment';"; ?>
+      var url=''.concat('http://localhost/ProjectC/Model/forumPostComments.php?username=',username,'&comment=',comment);
+      fetch(url,{method: 'POST'})
+   </script>
 
 
   <script>
