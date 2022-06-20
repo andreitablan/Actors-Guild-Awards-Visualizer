@@ -75,7 +75,7 @@
 
 <script>
     <?php $type=$_GET["type"]; echo "var type = '$type';"; $year=$_GET["year"]; echo "var year = '$year';"; $category=$_GET["category"]; echo "var category = '$category';"; $actorname=$_GET["actorname"]; echo "var actorname= '$actorname';"; $showname= $_GET["showname"]; echo "var showname= '$showname';"; $won=$_GET["won"]; echo "var won='$won';";?>
-      var url=''.concat('http://localhost/ProjectC/Model/adminCD.php?type=',type,'&year=',year,'&category=',category,'&actorname=',actorname,'&showname=',showname,'&won=',won);
+      var url=''.concat('http://localhost/Project/Model/adminCD.php?type=',type,'&year=',year,'&category=',category,'&actorname=',actorname,'&showname=',showname,'&won=',won);
       fetch(url,{method: 'POST'})
    </script>
 

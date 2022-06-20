@@ -71,7 +71,7 @@
   <script>
       var main1 = document.getElementById('maine');
       main1.innerHTML = '';
-      var url1='http://localhost/ProjectC/Model/forumGetComments.php';
+      var url1='http://localhost/Project/Model/forumGetComments.php';
      
       fetch(url1)
       .then((response) => response.json())
@@ -109,7 +109,7 @@
 
    <script>
     <?php $username=$_GET["username"]; echo "var username = '$username';"; $comment=$_GET["comment"]; echo "var comment = '$comment';"; ?>
-      var url=''.concat('http://localhost/ProjectC/Model/forumPostComments.php?username=',username,'&comment=',comment);
+      var url=''.concat('http://localhost/Project/Model/forumPostComments.php?username=',username,'&comment=',comment);
       fetch(url,{method: 'POST'})
    </script>
 
