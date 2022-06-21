@@ -194,107 +194,107 @@
 
   <button type="button" class="collapsible">FEMALE ACTOR IN A LEADING ROLE</button>
   <div class="content">
-  <p> <div id="main13">maine</div> <script>
+    <div id="main13">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main13'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=FEMALE ACTOR IN A LEADING ROLE'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">MALE ACTOR IN A LEADING ROLE</button>
   <div class="content">
-  <p> <div id="main12">maine</div> <script>
+  <div id="main12">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main12'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=MALE ACTOR IN A LEADING ROLE'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">FEMALE ACTOR IN A SUPPORTING ROLE</button>
   <div class="content">
-  <p> <div id="main11">maine</div> <script>
+   <div id="main11">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main11'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=FEMALE ACTOR IN A SUPPORTING ROLE'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">MALE ACTOR IN A SUPPORTING ROLE</button>
   <div class="content">
-  <p> <div id="main10">maine</div> <script>
+   <div id="main10">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main10'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=MALE ACTOR IN A SUPPORTING ROLE'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">FEMALE ACTOR IN A DRAMA SERIES</button>
   <div class="content">
-  <p> <div id="main9">maine</div> <script>
+   <div id="main9">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main9'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=FEMALE ACTOR IN A DRAMA SERIES'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">MALE ACTOR IN A DRAMA SERIES</button>
   <div class="content">
-  <p> <div id="main8">maine</div> <script>
+   <div id="main8">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main8'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=MALE ACTOR IN A DRAMA SERIES'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">FEMALE ACTOR IN A COMEDY SERIES</button>
   <div class="content">
-  <p> <div id="main7">maine</div> <script>
+   <div id="main7">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main7'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=MALE ACTOR IN A DRAMA SERIES'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">MALE ACTOR IN A COMEDY SERIES</button>
   <div class="content">
-  <p> <div id="main6">maine</div> <script>
+  <div id="main6">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main6'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=MALE ACTOR IN A COMEDY SERIES'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES</button>
   <div class="content">
-  <p> <div id="main5">maine</div> <script>
+  <div id="main5">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main5'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES</button>
   <div class="content">
-  <p> <div id="main4">maine</div> <script>
+  <div id="main4">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main4'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES'); fetchURL(url1,main1);
-    </script>  </p>
+    </script> 
   </div>
   <button type="button" class="collapsible">CAST IN A MOTION PICTURE</button>
   <div class="content">
-  <p> <div id="main3">maine</div> <script>
+   <div id="main3">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main3'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=CAST IN A MOTION PICTURE'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">ENSEMBLE IN A COMEDY SERIES</button>
   <div class="content">
-  <p> <div id="main2">maine</div> <script>
+   <div id="main2">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main2'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=ENSEMBLE IN A COMEDY SERIES'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
   <button type="button" class="collapsible">ENSEMBLE IN A DRAMA SERIES</button>
   <div class="content">
-    <p>  <div id="main1">maine</div> <script>
+    <div id="main1">maine</div> <script>
       <?php $an=$_GET["year"]; echo "var an = '$an';"; ?>
       var main1 = document.getElementById('main1'); main1.innerHTML = '';
       var url1=''.concat('http://localhost/Project/Controller/readController.php?year=',an,'&category=ENSEMBLE IN A DRAMA SERIES'); fetchURL(url1,main1);
-    </script>  </p>
+    </script>  
   </div>
 
   <script>
