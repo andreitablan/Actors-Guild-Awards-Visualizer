@@ -96,9 +96,9 @@
         </div>
 
     </div>
-    
+
     <main id="maine">
-       
+
     </main>
 
     <?php

@@ -16,12 +16,12 @@ class Database
     {
         $this->users = $db;
     }
-    
+
     /*reads the winners from the database*/
     public function read()
     {
-        $an=$_GET["year"];
-        $category=$_GET["category"];
+        $an = $_GET["year"];
+        $category = $_GET["category"];
 
         $cursor = $this->users->find(
             ['won' => 'True', 'category' => $category, 'year' => new \MongoDB\BSON\Regex($an)]
@@ -42,5 +42,4 @@ class Database
         $year = $_GET["year"];
         return $year;
     }
-   
 }

@@ -15,7 +15,7 @@
 <body>
 
   <header id="showcase">
-  <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
+    <h2 style="text-align: center;">Actors Guild Awards Visualizer</h2>
     <h2 style="text-align: center;">Statistic 2</h2>
   </header>
 
@@ -143,7 +143,7 @@
 
 
     <?php
-    $action=3;
+    $action = 3;
     include("../Controller/statisticsController.php");
 
     ?>
@@ -183,21 +183,21 @@
           'E.D.S'
         ],
         datasets: [{
-            label: 'Number of people',
-            data: [category1,category2,category3,category4,category5,category6,category7,category8,category9,category10,category11,category12,category13],
-            fill: false,
-            borderColor: 'rgb(75, 192, 192)',
-            tension: 0.1
-          }]
-       };
+          label: 'Number of people',
+          data: [category1, category2, category3, category4, category5, category6, category7, category8, category9, category10, category11, category12, category13],
+          fill: false,
+          borderColor: 'rgb(75, 192, 192)',
+          tension: 0.1
+        }]
+      };
       const config = {
         type: 'line',
         data: data,
         options: {
           title: {
             display: true,
-            responsive:true,
-            maintainAspectRatio:false,
+            responsive: true,
+            maintainAspectRatio: false,
             text: 'Chart Title'
           },
           scales: {
@@ -233,15 +233,12 @@
         })
       });
       document.getElementById("downloadPNG").addEventListener("click", function() {
-        downloadPNG();
-      });
-      document.getElementById("downloadSVG").addEventListener("click", function() {
-        downloadSVG();
+          downloadPNG();
       });
       document.getElementById("downloadWebP").addEventListener("click", function() {
         downloadWebP();
       });
-
+      
       function downloadCSV(args) {
         var data, filename, link;
         var csv = "year,FEMALE ACTOR IN A LEADING ROLE,MALE ACTOR IN A LEADING ROLE,FEMALE ACTOR IN A SUPPORTING ROLE,MALE ACTOR IN A SUPPORTING ROLE,FEMALE ACTOR IN A DRAMA SERIES,MALE ACTOR IN A DRAMA SERIES,FEMALE ACTOR IN A COMEDY SERIES,MALE ACTOR IN A COMEDY SERIES,FEMALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES,MALE ACTOR IN A TELEVISION MOVIE OR LIMITED SERIES,CAST IN A MOTION PICTURE,ENSEMBLE IN A COMEDY SERIES,ENSEMBLE IN A DRAMA SERIES\n";
@@ -259,7 +256,7 @@
         link = document.createElement('a');
         link.setAttribute('href', data);
         link.setAttribute('download', filename);
-        document.body.appendChild(link); 
+        document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
       }
@@ -280,46 +277,11 @@
       }
 
       <?php
-      $action=4;
+      $action = 4;
       include("../Controller/statisticsController.php");
-  
+
       ?>
 
-      function downloadSVG() {
-        //let svgData= chart;
-
-        people = `
-        <line x1="100" y1="200" x2="1400" y2="200" style="stroke:black;stroke-width:2" />
-        <line x1="100" y1="200" x2="100" y2="700" style="stroke:black;stroke-width:2" />
-        <line x1="100" y1="<?php echo $category1?>0" x2="200" y2="<?php echo $category2?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="200" y1="<?php echo $category2?>0" x2="300" y2="<?php echo $category3?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="300" y1="<?php echo $category3?>0" x2="400" y2="<?php echo $category4?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="400" y1="<?php echo $category4?>0" x2="500" y2="<?php echo $category5?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="500" y1="<?php echo $category5?>0" x2="600" y2="<?php echo $category6?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="600" y1="<?php echo $category6?>0" x2="700" y2="<?php echo $category7?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="700" y1="<?php echo $category7?>0" x2="800" y2="<?php echo $category8?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="800" y1="<?php echo $category8?>0" x2="900" y2="<?php echo $category9?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="900" y1="<?php echo $category9?>0" x2="1000" y2="<?php echo $category10?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="1000" y1="<?php echo $category10?>0" x2="1100" y2="<?php echo $category11?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="1100" y1="<?php echo $category11?>0" x2="1200" y2="<?php echo $category12?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-        <line x1="1200" y1="<?php echo $category12?>0" x2="1300" y2="<?php echo $category13?>0" style="stroke:rgb(255,0,0);stroke-width:2" />
-
-        `;
-
-        svgData = '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">' + people + "</svg>";
-
-        let svgBlob = new Blob([svgData], {
-          type: "image/svg+xml;charset=utf-8"
-        });
-        let svgUrl = URL.createObjectURL(svgBlob);
-        let downloadLink = document.createElement('a');
-        downloadLink.href = svgUrl;
-        downloadLink.download = 'chart.svg';
-        document.body.appendChild(downloadLink);
-        downloadLink.click();
-        document.body.removeChild(downloadLink);
-      }
-   
       function downloadWebP() {
         chart.options.title.text = 'New Chart Title';
         chart.update({

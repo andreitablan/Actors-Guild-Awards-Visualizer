@@ -111,8 +111,8 @@
     <?php $username=$_GET["username"]; echo "var username = '$username';"; $comment=$_GET["comment"]; echo "var comment = '$comment';"; ?>
       var url=''.concat('http://localhost/Project/Model/forumPostComments.php?username=',username,'&comment=',comment);
       fetch(url,{method: 'POST'})
+      window.open("Forum.php");
    </script>
-
 
   <script>
     var dropdown = document.getElementsByClassName("dropdown-btn");

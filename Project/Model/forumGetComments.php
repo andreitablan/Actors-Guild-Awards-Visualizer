@@ -22,4 +22,3 @@ include('../Model/config.php');
        }
        }
        echo json_encode($posts_arr);
-?>
