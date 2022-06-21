@@ -20,6 +20,7 @@ This project aims to vizualize the actors' nominalization in the last years at S
 * There are implemented microservices.
 * The project is divided into packages.
 * The project is using an external API(TMDB) in order to find details about movies and actors.
+* [Our API Documentation](https://documenter.getpostman.com/view/20622426/UzBnr7Dn)
 ## Authors
 Leagan Dan-Adrian <br />
 Tablan Andrei-Razvan
