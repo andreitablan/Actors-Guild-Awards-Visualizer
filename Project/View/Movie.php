@@ -102,7 +102,6 @@
   <?php
   ini_set('display_errors', 0);
   $var = $_GET["search"];
-  $var2 = "House of cards";
   ?>
 
   <script>
@@ -169,18 +168,14 @@
 
 
           main.appendChild(movieEl);
-          // })
         })
 
     }
 
-
     <?php echo "var show1 = '$var';"; ?>
-    <?php echo "var show2 = '$var2';"; ?>
 
     getConfig(show1);
 
-    
     function getSmtg() {
       return myPhoto;
     }

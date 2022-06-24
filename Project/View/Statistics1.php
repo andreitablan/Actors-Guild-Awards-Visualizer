@@ -264,7 +264,6 @@
       ?>
 
       function downloadSVG() {
-        //let svgData= chart;
 
         people = `
         <circle r="400" cx="450" cy="400" fill="blue" />

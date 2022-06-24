@@ -8,8 +8,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title style="font-family: Garamond, serif;font-size: 12px;color: rgba(0, 0, 0, 0.5);">Actors Guild Awards Visualizer</title>
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="javascript.js"></script>
 </head>
@@ -143,7 +141,7 @@
           <h2>FEATURED</h2>
           <div class="news-container">
             <a href="https://screenrant.com/oscars-actors-who-won-sag-award-but-not-oscar/">
-              <img src="../Resources/Images/GeneralNewsFeatured.png" alt="HTML tutorial">
+              <img src="../Resources/Images/GeneralNewsFeatured.png" alt="HTML">
             </a>
             <p class="carousel-text">10 Actors Who Won The SAG Award But Not The Oscar!</p>
           </div>
@@ -156,7 +154,7 @@
           <h2>LATEST</h2>
           <div class="news-container">
             <a href="https://www.hollywoodreporter.com/movies/movie-news/sag-awards-2022-nominations-list-nominees-1235073685/">
-              <img src="../Resources/Images/GeneralNewsFeatured1.png" alt="HTML tutorial">
+              <img src="../Resources/Images/GeneralNewsFeatured1.png" alt="HTML">
             </a>
             <p class="carousel-text">Nominalizations!</p>
           </div>
@@ -164,7 +162,7 @@
 
           <div class="news-container">
             <a href="https://www.eonline.com/news/sag_awards">
-              <img src="../Resources/Images/GeneralNewsLatest23.png" alt="HTML tutorial">
+              <img src="../Resources/Images/GeneralNewsLatest23.png" alt="HTML">
             </a>
             <p class="carousel-text">SAG AWARDS 2022 RED CARPET FASHION!</p>
           </div>

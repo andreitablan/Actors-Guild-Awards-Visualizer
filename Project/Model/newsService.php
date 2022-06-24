@@ -160,8 +160,6 @@ class News{
         if (isset($_GET["year"])) {
 
             $arraytosend = array($mynewslink, $myimagelink);
-            //return $arraytosend;
-            //echo $mynewslink;
             echo '<div id="popular-news">';
             echo '<div id="featured">';
             echo '<section class="popular-news-carousel">';
@@ -188,10 +186,6 @@ class News{
             echo '</section>';
             echo '</div>';
             echo '</div>';
-
-            //echo '<a href='; echo $mynewslink; echo '>Visit News</a>';
-            //echo '<br>';
-            //echo '<img src=';  echo $myimagelink;  echo ' style="width:300px;height:400px;">';
         }
     }
 }
